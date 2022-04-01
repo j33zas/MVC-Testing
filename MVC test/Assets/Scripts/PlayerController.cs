@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : IController
 {
-    // Start is called before the first frame update
-    void Start()
+    PlayerModel _M;
+    PlayerView _V;
+    public PlayerController(PlayerModel myOwner, PlayerView myView)
     {
-        
+        _M = myOwner;
+        _V = myView;
     }
 
-    // Update is called once per frame
-    void Update()
+    public Vector2 GetAxis()
     {
-        
+        throw new System.NotImplementedException();
+    }
+
+    public void Listener()
+    {
+        throw new System.NotImplementedException();
     }
 }
