@@ -27,6 +27,6 @@ public class PlayerView : MonoBehaviour
 
     public void MoveView(float MoveSpeed)
     {
-        _AN.SetFloat("speed", MoveSpeed);
+        _AN.SetFloat("CurrentSpeed", MoveSpeed);
     }
 }

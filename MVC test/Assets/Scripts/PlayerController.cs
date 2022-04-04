@@ -10,15 +10,22 @@ public class PlayerController : IController
     {
         _M = myOwner;
         _V = myView;
+        _M.OnMove += _V.MoveView;
     }
 
     public Vector2 GetAxis()
     {
-        throw new System.NotImplementedException();
+        var xinput = Input.GetAxisRaw("Horizontal");
+        var yinput = Input.GetAxisRaw("Vertical");
+        return new Vector2(xinput, yinput);
     }
 
     public void Listener()
     {
-        throw new System.NotImplementedException();
+        var xinput = Input.GetAxisRaw("Horizontal");
+        if(xinput !=0)
+            _M.OnMove(xinput);
+        if (Input.GetKeyDown(KeyCode.Space))
+            _M.OnJump();
     }
 }
