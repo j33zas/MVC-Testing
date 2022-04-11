@@ -13,6 +13,9 @@ public class PlayerController : IController
         _M.OnMove += _V.MoveView;
         _M.OnStop += _V.StopMoveView;
         _M.OnJump += _V.JumpView;
+        _M.OnCrouch += _V.CrouchView;
+        _M.OnStand += _V.StandView;
+        _M.OnLand += _V.LandView;
     }
 
     public Vector2 GetAxis()
@@ -21,11 +24,23 @@ public class PlayerController : IController
     public void Listener()
     {
         var xinput = Input.GetAxisRaw("Horizontal");
+        var yinput = Input.GetAxisRaw("Vertical");
         if (xinput != 0)
             _M.OnMove(xinput);
         else
             _M.OnStop();
 
         _M.OnJump(Input.GetKey(KeyCode.Space));
+
+        if(yinput < 0)
+        {
+            _M.OnCrouch();
+        }
+        else
+        {
+            Debug.Log("controller OK!");
+
+            _M.OnStand();
+        }
     }
 }

@@ -8,14 +8,27 @@ public class PlayerView : MonoBehaviour
     AudioSource _AU;
     SpriteRenderer _SR;
     Rigidbody2D _RB2D;
-    Dictionary<string, ParticleSystem> _particles;
-    Dictionary<string, AudioClip> _sounds;
-
+    Dictionary<string, ParticleSystem> _particlesDic;
+    Dictionary<string, AudioClip> _soundsDic;
+    [SerializeField]
+    ParticleSystem[] Particles;
+    [SerializeField]
+    AudioClip[] Sounds;
     float acceleration;
     float maxSpeed;
     float VertSpeed;
     float HorSpeed;
     bool grounded;
+    bool crouched;
+
+    private void Start()
+    {
+        foreach (var part in Particles)
+            AddParticle(part.gameObject.name, part);
+
+        foreach (var sound in Sounds)
+            AddSound(sound.name, sound);
+    }
 
     private void Update()
     {
@@ -56,13 +69,22 @@ public class PlayerView : MonoBehaviour
     #region Add
     public PlayerView AddParticle(string partName, ParticleSystem particle)
     {
-        _particles.Add(partName, particle);
+        if (_particlesDic == null)
+            _particlesDic = new Dictionary<string, ParticleSystem>();
+
+        if(!_particlesDic.ContainsKey(partName))
+            _particlesDic.Add(partName, particle);
+
         return this;
     }
 
     public PlayerView AddSound(string audioName, AudioClip audio)
     {
-        _sounds.Add(audioName, audio);
+        if (_soundsDic == null)
+            _soundsDic = new Dictionary<string, AudioClip>();
+
+        if(!_soundsDic.ContainsKey(audioName))
+            _soundsDic.Add(audioName, audio);
         return this;
     }
     #endregion
@@ -82,11 +104,26 @@ public class PlayerView : MonoBehaviour
     }
     public void JumpView(bool pressed)
     {
-
+        if(pressed && grounded && !_particlesDic["Jump"].isEmitting && !crouched)
+            _particlesDic["Jump"].Play();
     }
     public void DoubleJumpView()
     {
-
+        //
+    }
+    public void CrouchView()
+    {
+        crouched = true;
+        _AN.SetBool("Crouched", crouched);
+    }
+    public void StandView()
+    {
+        crouched = false;
+        _AN.SetBool("Crouched", crouched);
+    }
+    public void LandView()
+    {
+        _particlesDic["Land"].Play();
     }
     #endregion
 }

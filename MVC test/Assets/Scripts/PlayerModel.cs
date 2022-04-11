@@ -37,6 +37,13 @@ public class PlayerModel : MonoBehaviour
     [SerializeField]
     float jumpCD;
     float currentJumpCD;
+    [SerializeField]
+    float maxFallForce;
+    [SerializeField]
+    float fallForceAcceleration;
+    float currentFallForce;
+
+    bool crouched = false;
     #endregion
 
     #region actions
@@ -46,6 +53,8 @@ public class PlayerModel : MonoBehaviour
     public Action<bool> OnJump;
     public Action OnDoubleJump;
     public Action OnLand;
+    public Action OnCrouch;
+    public Action OnStand;
     public Action OnParry;
     public Action OnParrySucces;
     public Action OnShoot;
@@ -63,9 +72,12 @@ public class PlayerModel : MonoBehaviour
         //initiate model
         currentHP = maxHP;
         currentJumpAmount = maxJumpAmount;
+        currentCoyoteTime = maxFallForce;
         _RB2D = GetComponent<Rigidbody2D>();
         OnMove += MovePL;
         OnStop += StopMoving;
+        OnCrouch += Crouch;
+        OnStand += OnStand;
         OnDMG += DMGPL;
         OnJump += JumpPL;
         OnDoubleJump += DoubleJump;
@@ -93,35 +105,42 @@ public class PlayerModel : MonoBehaviour
         #region Jump Logic
         isGrounded = (Physics2D.Raycast(LFeet.position, Vector2.down, groundedRayLength) || Physics2D.Raycast(RFeet.position, Vector2.down, groundedRayLength));
         _PLVW.SetGrounded(isGrounded);
+        _RB2D.gravityScale = currentFallForce;
         if (isGrounded)
         {
             if (currentJumpAmount < maxJumpAmount)
                 currentJumpAmount = maxJumpAmount;
             canJump = true;
             currentCoyoteTime = maxCoyoteTime;
+            if (currentFallForce != 1)
+            {
+                OnLand();
+                currentFallForce = 1;
+            }
         }
         else
         {
             if (currentCoyoteTime > 0)
-            {
                 currentCoyoteTime -= Time.deltaTime;
-            }
             else
-            {
                 canJump = false;
-            }
+
+            if (_RB2D.velocity.y < 0)
+                currentFallForce = Mathf.Lerp(currentFallForce, maxFallForce, Time.deltaTime * fallForceAcceleration);
         }
         if (currentJumpAmount <= 0)
             canJump = false;
         #endregion
+
+
     }
 
     #region functions
     void MovePL(float moveDirection)
     {
-        if(currentSpeed <= maxSpeed)
+        if (currentSpeed <= maxSpeed)
             currentSpeed += acceleration * Time.deltaTime;
-        _RB2D.AddForce(Vector2.right * moveDirection * currentSpeed * Time.deltaTime,ForceMode2D.Force);
+        _RB2D.AddForce(Vector2.right * moveDirection * currentSpeed * Time.deltaTime, ForceMode2D.Force);
     }
     void StopMoving()
     {
@@ -130,35 +149,27 @@ public class PlayerModel : MonoBehaviour
 
     void JumpPL(bool pressed)
     {
-        if (pressed)
+        if (pressed && canJump && !crouched)
         {
-            //if(canJump && currentJumpAmount > 0 && !isGrounded && currentJumpCD <= 0)
-            //{
-            //    OnDoubleJump();
-            //    return;
-            //}
             currentTimePressedJump -= Time.deltaTime;
             if (currentTimePressedJump <= 0)
-            {
-                currentTimePressedJump = 0;
                 addingJumpForce = false;
-            }
             else
-            {
                 addingJumpForce = true;
-            }
-            if (canJump && addingJumpForce && currentJumpAmount > 0)
-            {
-                _RB2D.velocity *= new Vector2(1, 0);
+
+            if (addingJumpForce)
                 _RB2D.AddForce(Vector2.up * jumpForce * Time.deltaTime, ForceMode2D.Force);
-            }
+            else
+                _RB2D.velocity *= new Vector2(1, 0);
+
+            if (currentJumpCD > 0)
+                currentJumpCD -= Time.deltaTime;
         }
-        else
+        else if(!isGrounded)
         {
+            canJump = false;
             currentTimePressedJump = maxTimePressedJump;
         }
-        if(currentJumpCD > 0)
-            currentJumpCD -= Time.deltaTime;
     }
 
     void DoubleJump()
@@ -189,6 +200,21 @@ public class PlayerModel : MonoBehaviour
     void ShootPL()
     {
 
+    }
+    void Crouch()
+    {
+        if(!crouched)
+        {
+            crouched = true;
+        }
+    }
+    void Stand()
+    {
+        Debug.Log("UP!");
+        if(crouched)
+        {
+            crouched = false;
+        }
     }
     #endregion
 }
