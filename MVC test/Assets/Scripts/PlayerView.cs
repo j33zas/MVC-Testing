@@ -109,7 +109,7 @@ public class PlayerView : MonoBehaviour
     }
     public void DoubleJumpView()
     {
-        //
+        
     }
     public void CrouchView()
     {
@@ -124,6 +124,10 @@ public class PlayerView : MonoBehaviour
     public void LandView()
     {
         _particlesDic["Land"].Play();
+    }
+    public void ParryView()
+    {
+        _AN.SetTrigger("Parry");
     }
     #endregion
 }

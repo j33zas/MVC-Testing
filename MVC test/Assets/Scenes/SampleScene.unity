@@ -153,7 +153,9 @@ Transform:
   m_LocalPosition: {x: 0.34, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1702577204}
+  - {fileID: 620047827}
   m_Father: {fileID: 298132417}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15004,8 +15006,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 159996037}
-  - {fileID: 1702577204}
-  - {fileID: 620047827}
   - {fileID: 975476294}
   - {fileID: 1674812458}
   - {fileID: 821293737}
@@ -15026,7 +15026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 4.25
-  jumpForce: 30
+  jumpForce: 20
   acceleration: 64
   maxCoyoteTime: 0.2
   maxHP: 100
@@ -15034,10 +15034,12 @@ MonoBehaviour:
   RFeet: {fileID: 1674812458}
   groundedRayLength: 0.025
   maxJumpAmount: 1
-  maxTimePressedJump: 1.5
+  maxTimePressedJump: 0.3
   jumpCD: 0.6
-  maxFallForce: 2
-  fallForceAcceleration: 6
+  maxFallForce: 5
+  fallForceAcceleration: 12
+  parryProj: {fileID: 3686912813549612732, guid: d249da40b4f6be34e91eb799a026a659, type: 3}
+  bulletProj: {fileID: 0}
 --- !u!61 &298132420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15093,7 +15095,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 298132417}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &620047826
 GameObject:
@@ -15121,14 +15123,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620047826}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.34, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 999328028}
   - {fileID: 174324074}
-  m_Father: {fileID: 298132417}
-  m_RootOrder: 2
+  m_Father: {fileID: 159996037}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &620047828
 ParticleSystemRenderer:
@@ -20102,7 +20104,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 298132417}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &975476293
 GameObject:
@@ -20133,7 +20135,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 298132417}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &999328027
 GameObject:
@@ -25236,7 +25238,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 298132417}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1702577203
 GameObject:
@@ -25264,14 +25266,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702577203}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.34, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 187341480}
   - {fileID: 177684334}
-  m_Father: {fileID: 298132417}
-  m_RootOrder: 1
+  m_Father: {fileID: 159996037}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1702577205
 ParticleSystemRenderer:

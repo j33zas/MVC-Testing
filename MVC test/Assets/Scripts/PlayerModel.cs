@@ -42,8 +42,11 @@ public class PlayerModel : MonoBehaviour
     [SerializeField]
     float fallForceAcceleration;
     float currentFallForce;
-
     bool crouched = false;
+    [SerializeField]
+    ParryProjectile parryProj;
+    [SerializeField]
+    Bullet bulletProj;
     #endregion
 
     #region actions
@@ -65,6 +68,8 @@ public class PlayerModel : MonoBehaviour
     Rigidbody2D _RB2D;
     PlayerController _PLCT;
     PlayerView _PLVW;
+    Pool<ParryProjectile> _parryPool;
+    Pool<Bullet> _bulletPool;
     #endregion
 
     private void Start()
@@ -77,7 +82,7 @@ public class PlayerModel : MonoBehaviour
         OnMove += MovePL;
         OnStop += StopMoving;
         OnCrouch += Crouch;
-        OnStand += OnStand;
+        OnStand += Stand;
         OnDMG += DMGPL;
         OnJump += JumpPL;
         OnDoubleJump += DoubleJump;
@@ -88,6 +93,15 @@ public class PlayerModel : MonoBehaviour
         {
             _PLCT = null;
         };
+        _parryPool = new Pool<ParryProjectile>(
+            ParryFactory,
+            SpawnProjectile,
+            DespawnProyectile, 2);
+        _bulletPool = new Pool<Bullet>(
+            BulletFactory,
+            SpawnProjectile,
+            DespawnProyectile, 15);
+        
         //initiate view
         _PLVW = GetComponentInChildren<PlayerView>();
         _PLVW.SetAnimator(GetComponentInChildren<Animator>())
@@ -191,8 +205,9 @@ public class PlayerModel : MonoBehaviour
 
     void ParryPL()
     {
-
+        _parryPool.GetObject();
     }
+
     void ParrySuccessPL()
     {
 
@@ -210,11 +225,33 @@ public class PlayerModel : MonoBehaviour
     }
     void Stand()
     {
-        Debug.Log("UP!");
         if(crouched)
         {
             crouched = false;
         }
+    }
+    #endregion
+
+    #region Pool
+    ParryProjectile ParryFactory()
+    {
+        ParryProjectile r = Instantiate(parryProj);
+        r.SetPool(_parryPool).SetOwner(gameObject);
+        return r;
+    }
+    Bullet BulletFactory()
+    {
+        Bullet r = Instantiate(bulletProj);
+        r.SetPool(_bulletPool).SetOwner(gameObject);
+        return r;
+    }
+    void SpawnProjectile(Iprojectile obj)
+    {
+        obj.GetFired().SetActive(true);
+    }
+    void DespawnProyectile(Iprojectile obj)
+    {
+        obj.DieOff().SetActive(false);
     }
     #endregion
 }

@@ -16,6 +16,7 @@ public class PlayerController : IController
         _M.OnCrouch += _V.CrouchView;
         _M.OnStand += _V.StandView;
         _M.OnLand += _V.LandView;
+        _M.OnParry += _V.ParryView;
     }
 
     public Vector2 GetAxis()
@@ -38,8 +39,6 @@ public class PlayerController : IController
         }
         else
         {
-            Debug.Log("controller OK!");
-
             _M.OnStand();
         }
     }
