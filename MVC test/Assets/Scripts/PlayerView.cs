@@ -18,8 +18,9 @@ public class PlayerView : MonoBehaviour
     float maxSpeed;
     float VertSpeed;
     float HorSpeed;
-    bool grounded;
+    bool isGrounded;
     bool crouched;
+    bool canParry;
 
     private void Start()
     {
@@ -32,10 +33,16 @@ public class PlayerView : MonoBehaviour
 
     private void Update()
     {
-        VertSpeed = _RB2D.velocity.y;
-        HorSpeed = _RB2D.velocity.x;
-        _AN.SetInteger("VerticalSpeed", Mathf.RoundToInt(VertSpeed));
-        _AN.SetBool("AirBorne", !grounded);
+        if(_RB2D)
+        {
+            VertSpeed = _RB2D.velocity.y;
+            HorSpeed = _RB2D.velocity.x;
+        }
+        if(_AN)
+        {
+            _AN.SetInteger("VerticalSpeed", Mathf.RoundToInt(VertSpeed));
+            _AN.SetBool("AirBorne", !isGrounded);
+        }
     }
 
     #region Builder!
@@ -61,7 +68,12 @@ public class PlayerView : MonoBehaviour
     }
     public PlayerView SetGrounded(bool G)
     {
-        grounded = G;
+        isGrounded = G;
+        return this;
+    }
+    public PlayerView SetCanParry(bool P)
+    {
+        canParry = P;
         return this;
     }
     #endregion
@@ -92,19 +104,40 @@ public class PlayerView : MonoBehaviour
     #region actions
     public void MoveView(float moveDirection)
     {
+        if(isGrounded)
+        {
+            if(!_particlesDic["Walk"].isEmitting)
+                _particlesDic["Walk"].Play();
+        }
+        else
+        {
+            if (_particlesDic["Walk"].isEmitting)
+                _particlesDic["Walk"].Stop();
+        }
+
         if (moveDirection < 0)
+        {
             _SR.flipX = true;
+            if(_particlesDic["Walk"].transform.rotation.z != 180)
+                _particlesDic["Walk"].transform.Rotate(new Vector3(0, 0, 180));
+        }
         else if (moveDirection > 0)
+        {
             _SR.flipX = false;
+            if(_particlesDic["Walk"].transform.rotation.z != 0)
+                _particlesDic["Walk"].transform.Rotate(new Vector3(0, 0, 180));
+        }
         _AN.SetFloat("HorizontalSpeed", Mathf.Abs(moveDirection));
     }
     public void StopMoveView()
     {
         _AN.SetFloat("HorizontalSpeed", 0);
+        if (_particlesDic["Walk"].isEmitting)
+            _particlesDic["Walk"].Stop();
     }
     public void JumpView(bool pressed)
     {
-        if(pressed && grounded && !_particlesDic["Jump"].isEmitting && !crouched)
+        if(pressed && isGrounded && !_particlesDic["Jump"].isEmitting && !crouched)
             _particlesDic["Jump"].Play();
     }
     public void DoubleJumpView()
@@ -127,7 +160,12 @@ public class PlayerView : MonoBehaviour
     }
     public void ParryView()
     {
-        _AN.SetTrigger("Parry");
+        if(canParry)
+            _AN.SetTrigger("Parry");
+    }
+    public void ShootView()
+    {
+
     }
     #endregion
 }

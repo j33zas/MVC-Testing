@@ -7,22 +7,21 @@ public class PlayerModel : MonoBehaviour
 {
     #region Stats
     [SerializeField]
-    float maxSpeed = 3f;
+    int maxHP;
+    int currentHP;
     [SerializeField]
-    float jumpForce = 1f;
-    [SerializeField]
-    float acceleration = 1f;
-    [SerializeField]
-    float maxCoyoteTime = .3f;
+    float maxCoyoteTime;
     float currentCoyoteTime;
     [SerializeField]
-    int maxHP = 100;
-    [SerializeField]
-    Transform LFeet;
-    [SerializeField]
-    Transform RFeet;
+    float maxSpeed;
     float currentSpeed = 0;
-    int currentHP;
+    [SerializeField]
+    float acceleration;
+    [SerializeField]
+    float jumpForce;
+    bool isCrouched = false;
+
+    #region Jump Stats
     bool canJump = true;
     bool addingJumpForce = false;
     bool isGrounded = true;
@@ -42,11 +41,28 @@ public class PlayerModel : MonoBehaviour
     [SerializeField]
     float fallForceAcceleration;
     float currentFallForce;
-    bool crouched = false;
+    #endregion
+
     [SerializeField]
-    ParryProjectile parryProj;
+    float parryCD;
+    float currentParryCD;
+    bool canParry;
+
+    #endregion
+
+    #region Transforms
     [SerializeField]
-    Bullet bulletProj;
+    Transform LFeet;
+    [SerializeField]
+    Transform RFeet;
+    [SerializeField]
+    Transform LShoulder;
+    [SerializeField]
+    Transform RShoulder;
+    [SerializeField]
+    Transform parrySpawn;
+    [SerializeField]
+    Transform bulletSpawn;
     #endregion
 
     #region actions
@@ -70,14 +86,33 @@ public class PlayerModel : MonoBehaviour
     PlayerView _PLVW;
     Pool<ParryProjectile> _parryPool;
     Pool<Bullet> _bulletPool;
+    [SerializeField]
+    ParryProjectile parryProj;
+    [SerializeField]
+    Bullet bulletProj;
     #endregion
 
+    private void Awake()
+    {
+        #region pool initiation
+        _parryPool = new Pool<ParryProjectile>(
+        ParryFactory,
+        SpawnProjectile,
+        DespawnProyectile, 2);
+
+        _bulletPool = new Pool<Bullet>(
+            BulletFactory,
+            SpawnProjectile,
+            DespawnProyectile, 15);
+        #endregion
+    }
     private void Start()
     {
         //initiate model
         currentHP = maxHP;
         currentJumpAmount = maxJumpAmount;
         currentCoyoteTime = maxFallForce;
+        currentParryCD = parryCD;
         _RB2D = GetComponent<Rigidbody2D>();
         OnMove += MovePL;
         OnStop += StopMoving;
@@ -93,14 +128,6 @@ public class PlayerModel : MonoBehaviour
         {
             _PLCT = null;
         };
-        _parryPool = new Pool<ParryProjectile>(
-            ParryFactory,
-            SpawnProjectile,
-            DespawnProyectile, 2);
-        _bulletPool = new Pool<Bullet>(
-            BulletFactory,
-            SpawnProjectile,
-            DespawnProyectile, 15);
         
         //initiate view
         _PLVW = GetComponentInChildren<PlayerView>();
@@ -116,6 +143,7 @@ public class PlayerModel : MonoBehaviour
     {
         if (_PLCT != null)
             _PLCT.Listener();
+
         #region Jump Logic
         isGrounded = (Physics2D.Raycast(LFeet.position, Vector2.down, groundedRayLength) || Physics2D.Raycast(RFeet.position, Vector2.down, groundedRayLength));
         _PLVW.SetGrounded(isGrounded);
@@ -146,7 +174,19 @@ public class PlayerModel : MonoBehaviour
             canJump = false;
         #endregion
 
-
+        #region Parry logic
+        if(currentParryCD < parryCD)
+        {
+            currentParryCD += Time.deltaTime;
+            canParry = false;
+        }
+        else
+        {
+            currentParryCD = parryCD;
+            canParry = true;
+        }
+        _PLVW.SetCanParry(canParry);
+        #endregion
     }
 
     #region functions
@@ -163,7 +203,7 @@ public class PlayerModel : MonoBehaviour
 
     void JumpPL(bool pressed)
     {
-        if (pressed && canJump && !crouched)
+        if (pressed && canJump && !isCrouched)
         {
             currentTimePressedJump -= Time.deltaTime;
             if (currentTimePressedJump <= 0)
@@ -205,29 +245,35 @@ public class PlayerModel : MonoBehaviour
 
     void ParryPL()
     {
-        _parryPool.GetObject();
+        if(canParry)
+        {
+            _parryPool.GetObject().SetPool(_parryPool);
+            currentParryCD = 0;
+        }
     }
 
     void ParrySuccessPL()
     {
 
     }
+
     void ShootPL()
     {
-
+        _bulletPool.GetObject().SetPool(_bulletPool);
     }
+
     void Crouch()
     {
-        if(!crouched)
+        if(!isCrouched)
         {
-            crouched = true;
+            isCrouched = true;
         }
     }
     void Stand()
     {
-        if(crouched)
+        if(isCrouched)
         {
-            crouched = false;
+            isCrouched = false;
         }
     }
     #endregion
@@ -235,23 +281,22 @@ public class PlayerModel : MonoBehaviour
     #region Pool
     ParryProjectile ParryFactory()
     {
-        ParryProjectile r = Instantiate(parryProj);
-        r.SetPool(_parryPool).SetOwner(gameObject);
+        ParryProjectile r = Instantiate(parryProj, parrySpawn.position, parrySpawn.rotation);
         return r;
     }
     Bullet BulletFactory()
     {
-        Bullet r = Instantiate(bulletProj);
-        r.SetPool(_bulletPool).SetOwner(gameObject);
+        Bullet r = Instantiate(bulletProj, bulletSpawn.position, bulletSpawn.rotation);
         return r;
     }
     void SpawnProjectile(Iprojectile obj)
     {
-        obj.GetFired().SetActive(true);
+        obj.GetFired();
+        obj.SetOwner(gameObject);
     }
     void DespawnProyectile(Iprojectile obj)
     {
-        obj.DieOff().SetActive(false);
+        obj.DieOff();
     }
     #endregion
 }

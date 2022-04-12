@@ -5,11 +5,12 @@ using UnityEngine;
 public class Bullet : MonoBehaviour, Iprojectile
 {
     [SerializeField]
-    float maxTimeAlive;
-    float currentTimeAlive;
+    float lifeTime;
+    float currentLifeTime;
     [SerializeField]
     float speed;
     protected GameObject owner;
+    //BulletBehaviour BBH;
 
     Collider2D _COLL;
     SpriteRenderer _SR;
@@ -17,26 +18,31 @@ public class Bullet : MonoBehaviour, Iprojectile
 
     private void Update()
     {
-        if (currentTimeAlive > 0)
-            currentTimeAlive -= Time.deltaTime;
+        if (currentLifeTime > 0)
+            currentLifeTime -= Time.deltaTime;
         else
             _POOL.ReturnObject(this);
+
         transform.position += Vector3.right * speed * Time.deltaTime;
+        //BBH.Behave();
     }
 
     public GameObject GetFired()
     {
-        currentTimeAlive = maxTimeAlive;
-        throw new System.NotImplementedException();
+        currentLifeTime = lifeTime;
+        gameObject.SetActive(true);
+        return gameObject;
     }
 
     public void GetParried()
     {
-        throw new System.NotImplementedException();
+
     }
 
     public GameObject DieOff()
     {
+        gameObject.SetActive(false);
+        currentLifeTime = lifeTime;
         return gameObject;
     }
 

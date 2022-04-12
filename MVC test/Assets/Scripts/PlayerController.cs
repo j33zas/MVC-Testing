@@ -17,6 +17,7 @@ public class PlayerController : IController
         _M.OnStand += _V.StandView;
         _M.OnLand += _V.LandView;
         _M.OnParry += _V.ParryView;
+        _M.OnShoot += _V.ShootView;
     }
 
     public Vector2 GetAxis()
@@ -32,6 +33,11 @@ public class PlayerController : IController
             _M.OnStop();
 
         _M.OnJump(Input.GetKey(KeyCode.Space));
+
+        if (Input.GetMouseButtonDown(0))
+            _M.OnShoot();
+        if (Input.GetMouseButtonDown(1))
+            _M.OnParry();
 
         if(yinput < 0)
         {

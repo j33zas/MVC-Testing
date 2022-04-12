@@ -6,33 +6,40 @@ public class ParryProjectile : MonoBehaviour, Iprojectile
 {
     Pool<ParryProjectile> _POOL;
     [SerializeField]
-    float lifeTime;
+    float maxLifeTime;
+    float currentLifeTime;
+
+    GameObject _owner;
 
     private void Update()
     {
-        if (lifeTime > 0)
-            lifeTime -= Time.deltaTime;
-        else
+        if (currentLifeTime > 0)
+            currentLifeTime -= Time.deltaTime;
+        else if(_POOL != null)
             _POOL.ReturnObject(this);
     }
     public GameObject DieOff()
     {
-        throw new System.NotImplementedException();
+        gameObject.SetActive(false);
+        currentLifeTime = maxLifeTime;
+        return gameObject;
     }
 
     public GameObject GetFired()
     {
-        throw new System.NotImplementedException();
+        gameObject.SetActive(true);
+        return gameObject;
     }
 
     public void GetParried()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public Iprojectile SetOwner(GameObject O)
     {
-        throw new System.NotImplementedException();
+        _owner = O;
+        return this;
     }
 
     public ParryProjectile SetPool(Pool<ParryProjectile> P)
