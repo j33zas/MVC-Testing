@@ -43,11 +43,20 @@ public class PlayerModel : MonoBehaviour
     float currentFallForce;
     #endregion
 
+    #region Parry Stats
     [SerializeField]
     float parryCD;
     float currentParryCD;
     bool canParry;
+    #endregion
 
+    #region Shoot Stats
+    [SerializeField]
+    float shootCD;
+    float currentShootCD;
+    bool canShoot;
+
+    #endregion
     #endregion
 
     #region Transforms
@@ -112,7 +121,8 @@ public class PlayerModel : MonoBehaviour
         currentHP = maxHP;
         currentJumpAmount = maxJumpAmount;
         currentCoyoteTime = maxFallForce;
-        currentParryCD = parryCD;
+        currentParryCD = 0;
+        currentShootCD = 0;
         _RB2D = GetComponent<Rigidbody2D>();
         OnMove += MovePL;
         OnStop += StopMoving;
@@ -175,15 +185,28 @@ public class PlayerModel : MonoBehaviour
         #endregion
 
         #region Parry logic
-        if(currentParryCD < parryCD)
+        if (currentParryCD > 0)
         {
-            currentParryCD += Time.deltaTime;
+            currentParryCD -= Time.deltaTime;
             canParry = false;
         }
         else
         {
-            currentParryCD = parryCD;
+            currentParryCD = 0;
             canParry = true;
+        }
+        _PLVW.SetCanParry(canParry);
+        #endregion
+        #region Shoot Logic
+        if (currentShootCD > 0)
+        {
+            currentShootCD -= Time.deltaTime;
+            canShoot = false;
+        }
+        else
+        {
+            currentShootCD = 0;
+            canShoot = true;
         }
         _PLVW.SetCanParry(canParry);
         #endregion
@@ -247,8 +270,10 @@ public class PlayerModel : MonoBehaviour
     {
         if(canParry)
         {
-            _parryPool.GetObject().SetPool(_parryPool);
-            currentParryCD = 0;
+            var P = _parryPool.GetObject().SetPool(_parryPool);
+            P.transform.position = parrySpawn.transform.position;
+            P.transform.rotation = parrySpawn.transform.rotation;
+            currentParryCD = parryCD;
         }
     }
 
@@ -259,7 +284,13 @@ public class PlayerModel : MonoBehaviour
 
     void ShootPL()
     {
-        _bulletPool.GetObject().SetPool(_bulletPool);
+        if (canShoot)
+        {
+            var B = _bulletPool.GetObject().SetPool(_bulletPool);
+            B.transform.position = bulletSpawn.position;
+            B.transform.rotation = bulletSpawn.rotation;
+            currentShootCD = shootCD;
+        }
     }
 
     void Crouch()

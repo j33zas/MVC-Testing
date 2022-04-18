@@ -21,6 +21,7 @@ public class PlayerView : MonoBehaviour
     bool isGrounded;
     bool crouched;
     bool canParry;
+    bool canShoot;
 
     private void Start()
     {
@@ -74,6 +75,12 @@ public class PlayerView : MonoBehaviour
     public PlayerView SetCanParry(bool P)
     {
         canParry = P;
+        return this;
+    }
+
+    public PlayerView SetCanShoot(bool S)
+    {
+        canShoot = S;
         return this;
     }
     #endregion

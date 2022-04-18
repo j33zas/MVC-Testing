@@ -40,12 +40,8 @@ public class PlayerController : IController
             _M.OnParry();
 
         if(yinput < 0)
-        {
             _M.OnCrouch();
-        }
         else
-        {
             _M.OnStand();
-        }
     }
 }

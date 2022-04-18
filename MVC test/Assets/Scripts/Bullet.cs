@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour, Iprojectile
     float lifeTime;
     float currentLifeTime;
     [SerializeField]
-    float speed;
+    float mySpeed;
     protected GameObject owner;
     //BulletBehaviour BBH;
 
@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour, Iprojectile
         else
             _POOL.ReturnObject(this);
 
-        transform.position += Vector3.right * speed * Time.deltaTime;
+        transform.position += Vector3.right * mySpeed * Time.deltaTime;
         //BBH.Behave();
     }
 
@@ -42,7 +42,6 @@ public class Bullet : MonoBehaviour, Iprojectile
     public GameObject DieOff()
     {
         gameObject.SetActive(false);
-        currentLifeTime = lifeTime;
         return gameObject;
     }
 
