@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TopDownCharactercontrollerFull : MonoBehaviour
+public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
 {
     Animator _AN;
     Rigidbody2D _RB2D;
@@ -10,6 +10,14 @@ public class TopDownCharactercontrollerFull : MonoBehaviour
 
     #region Stats
     [Header("STATS")]
+
+    #region Health
+    [SerializeField] int maxHP;
+    int currentHP;
+    bool DMGInvulnerable;
+    bool knockBackInvulnerable;
+    
+    #endregion
 
     #region Movement Stats
     [Header("movement")]
@@ -33,7 +41,6 @@ public class TopDownCharactercontrollerFull : MonoBehaviour
     [SerializeField] float rollNoInputTime;
     [SerializeField] float rollCD;
     float currentRollCD;
-    bool invulnerable;
     bool canRoll;
     bool isRolling;
     #endregion
@@ -66,10 +73,12 @@ public class TopDownCharactercontrollerFull : MonoBehaviour
     {
         _RB2D = GetComponent<Rigidbody2D>();
         _AN = GetComponentInChildren<Animator>();
+        _SR = GetComponentInChildren<SpriteRenderer>();
         currentSpeed = 0;
         currentAcceleration = acceleration;
         currentDeAcceleration = deAcceleration;
         currentRollCD = 0;
+        currentHP = maxHP;
     }
     
     void Update()
@@ -141,41 +150,43 @@ public class TopDownCharactercontrollerFull : MonoBehaviour
 
     void Roll(Vector2 direction)
     {
-        if(canRoll)
+        if (!canRoll) return;
+        
+        canRoll = false;
+        isRolling = true;
+        DMGInvulnerable = true;
+        knockBackInvulnerable = true;
+
+        _AN.SetTrigger("Roll");
+        rollParticle.Play();
+
+        if (direction == Vector2.zero)
+            direction = lastDir;
+
+        _RB2D.velocity = Vector2.zero;
+        _RB2D.AddForce(direction * rollForce * Time.deltaTime, ForceMode2D.Impulse);
+
+        if(direction.x < 0)
         {
-            canRoll = false;
-            isRolling = true;
-            invulnerable = true;
-
-            _AN.SetTrigger("Roll");
-            rollParticle.Play();
-
-            if (direction == Vector2.zero)
-                direction = lastDir;
-
-            _RB2D.velocity = Vector2.zero;
-            _RB2D.AddForce(direction * rollForce * Time.deltaTime, ForceMode2D.Impulse);
-
-            if(direction.x < 0)
-            {
-                if (transform.localScale != new Vector3(-1, 1, 1))
-                    transform.localScale = new Vector3(-1, 1, 1);
-            }
-            else
-            {
-                if (transform.localScale != new Vector3(1, 1, 1))
-                    transform.localScale = new Vector3(1, 1, 1);
-            }
-
-            StartCoroutine(EndRollinvulnerability(rollInvulnerableTime));
-            StartCoroutine(EndRollImpulse(rollNoInputTime));
+            if (transform.localScale != new Vector3(-1, 1, 1))
+                transform.localScale = new Vector3(-1, 1, 1);
         }
+        else
+        {
+            if (transform.localScale != new Vector3(1, 1, 1))
+                transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        StartCoroutine(EndRollinvulnerability(rollInvulnerableTime));
+        StartCoroutine(EndRollImpulse(rollNoInputTime));
+        
     }
 
     IEnumerator EndRollinvulnerability(float time)
     {
         yield return new WaitForSeconds(time);
-        invulnerable = false;
+        DMGInvulnerable = false;
+        knockBackInvulnerable = false;
     }
 
     IEnumerator EndRollImpulse(float time)
@@ -185,6 +196,7 @@ public class TopDownCharactercontrollerFull : MonoBehaviour
         _RB2D.velocity = Vector2.zero;
         endRollParticle.Play();
         rollParticle.Stop();
+        _SR.color = Color.white;
     }
 
     void HandsLooking(Vector2 screenPoint)
@@ -208,5 +220,23 @@ public class TopDownCharactercontrollerFull : MonoBehaviour
         Vector2 middlePoint = ((Vector2)transform.position + mousePos) / cameraMaxDistance;
         cam.transform.position = new Vector3(middlePoint.x,middlePoint.y, cam.transform.position.z);
 
+    }
+
+    public void GetHit(int DMG, float KnockBack, Vector2 direction, GameObject attacker)
+    {
+        if (!DMGInvulnerable)
+            currentHP -= DMG;
+        else DodgeHit();
+
+        if(!knockBackInvulnerable)
+            _RB2D.AddForce(direction * KnockBack, ForceMode2D.Impulse);
+
+        Debug.Log(currentHP);
+    }
+
+    public void DodgeHit()
+    {
+        Debug.Log("EPICO!");
+        _SR.color = Color.cyan;
     }
 }
