@@ -5060,7 +5060,7 @@ MonoBehaviour:
   deAcceleration: 10
   direction: {x: 0, y: 0}
   hands: {fileID: 6374684487999270454}
-  rollForce: 10
+  rollForce: 20
   rollInvulnerableTime: 0.3
   rollNoInputTime: 1
   rollCD: 1

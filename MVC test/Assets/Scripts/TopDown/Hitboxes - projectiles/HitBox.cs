@@ -5,7 +5,18 @@ using UnityEngine;
 public class HitBox : MonoBehaviour
 {
     public float lifetime;
-    public int dmg;
+    int _myDMG;
+    public int dmg
+    {
+        get
+        {
+            return _myDMG;
+        }
+        set
+        {
+            _myDMG = value;
+        }
+    }
     public float speed;
     public float knockBack;
     public Vector2 knockBackDirection;

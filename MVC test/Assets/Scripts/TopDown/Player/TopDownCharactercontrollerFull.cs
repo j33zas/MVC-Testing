@@ -7,6 +7,8 @@ public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
     Animator _AN;
     Rigidbody2D _RB2D;
     SpriteRenderer _SR;
+    List<WeaponController> _myInventory = new List<WeaponController>();
+    WeaponController _currentWPN;
 
     #region Stats
     [Header("STATS")]
@@ -69,6 +71,7 @@ public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
     [SerializeField] ParticleSystem rollParticle;
     [SerializeField] ParticleSystem endRollParticle;
     #endregion
+
     void Start()
     {
         _RB2D = GetComponent<Rigidbody2D>();
@@ -202,7 +205,7 @@ public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
     void HandsLooking(Vector2 screenPoint)
     {
         if (isRolling) return;
-        hands.transform.right = (Vector2)transform.position - screenPoint;
+        hands.transform.right = (Vector2)hands.transform.position - screenPoint;
         if(screenPoint.x < transform.position.x)
         {
             if(transform.localScale != new Vector3(-1, 1, 1))
@@ -217,9 +220,9 @@ public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
 
     void CameraPositioning(Vector2 mousePos)
     {
-        Vector2 middlePoint = ((Vector2)transform.position + mousePos) / cameraMaxDistance;
+        Vector2 middlePoint = (mousePos - (Vector2)transform.position) /2/ cameraMaxDistance;
         cam.transform.position = new Vector3(middlePoint.x,middlePoint.y, cam.transform.position.z);
-
+        cam.transform.position += transform.position;
     }
 
     public void GetHit(int DMG, float KnockBack, Vector2 direction, GameObject attacker)
