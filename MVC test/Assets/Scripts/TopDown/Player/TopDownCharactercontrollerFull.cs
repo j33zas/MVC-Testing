@@ -119,6 +119,8 @@ public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
         #region animations
         _AN.SetFloat("Speed", currentSpeed);
         #endregion
+
+        _currentWPN.Listener();
     }
 
     void Move(Vector2 direction)
@@ -185,6 +187,7 @@ public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
         
     }
 
+
     IEnumerator EndRollinvulnerability(float time)
     {
         yield return new WaitForSeconds(time);
@@ -205,14 +208,15 @@ public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
     void HandsLooking(Vector2 screenPoint)
     {
         if (isRolling) return;
-        hands.transform.right = (Vector2)hands.transform.position - screenPoint;
         if(screenPoint.x < transform.position.x)
         {
+            hands.transform.right = (Vector2)hands.transform.position - screenPoint;
             if(transform.localScale != new Vector3(-1, 1, 1))
                 transform.localScale = new Vector3(-1, 1, 1);
         }
         else
         {
+            hands.transform.right = -(Vector2)hands.transform.position - screenPoint;
             if (transform.localScale != new Vector3(1, 1, 1))
                 transform.localScale = new Vector3(1, 1, 1);
         }

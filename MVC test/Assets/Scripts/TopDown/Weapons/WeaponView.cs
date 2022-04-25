@@ -12,14 +12,35 @@ public class WeaponView : MonoBehaviour
     [SerializeField] AudioClip[] sounds;
     protected Dictionary<string, AudioClip> _soundDictionary;
 
+    public WeaponView()
+    {
+        _SR = GetComponent<SpriteRenderer>();
+        _AN = GetComponent<Animator>();
+        _AU = GetComponent<AudioSource>();
+    }
+
+    protected void PlaySound(string name)
+    {
+        _AU.PlayOneShot(_soundDictionary[name]);
+    }
+
+    protected void PlayParticle(string name)
+    {
+        _partDictionary[name].Play();
+    }
+
     protected WeaponView AddParticle(ParticleSystem P)
     {
+        if (_partDictionary == null)
+            _partDictionary = new Dictionary<string, ParticleSystem>();
         _partDictionary.Add(P.name, P);
         return this;
     }
 
     protected WeaponView AddSound(AudioClip A)
     {
+        if (_soundDictionary == null)
+            _soundDictionary = new Dictionary<string, AudioClip>();
         _soundDictionary.Add(A.name, A);
         return this;
     }
@@ -49,6 +70,10 @@ public class WeaponView : MonoBehaviour
 
     }
     virtual public void KillEnemyView()
+    {
+
+    }
+    virtual public void HitView()
     {
 
     }

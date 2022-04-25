@@ -13,6 +13,7 @@ public class WeaponModel : MonoBehaviour
     public Action onStartCoolDown;
     public Action onEndCoolDown;
     public Action onKill;
+    public Action onHit;
     public Action onMiss;
     public Action onPickUp;
     public Action onDrop;
@@ -34,8 +35,71 @@ public class WeaponModel : MonoBehaviour
     [SerializeField] protected WeaponController _WC;
     #endregion
 
-    public WeaponModel()
+    #region Functions
+    protected virtual void StartCharge()
     {
 
     }
+    protected virtual void EndCharge()
+    {
+
+    }
+    protected virtual void Use()
+    {
+
+    }
+    protected virtual void EndUse()
+    {
+
+    }
+    protected virtual void StartCoolDown()
+    {
+
+    }
+    protected virtual void EndCoolDown()
+    {
+
+    }
+    protected virtual void Kill()
+    {
+
+    }// !!!
+    protected virtual void Hit()
+    {
+
+    }
+    protected virtual void Miss()
+    {
+
+    }
+    protected virtual void PickUp()
+    {
+
+    }
+    protected virtual void Drop()
+    {
+
+    }
+    protected virtual void Equip()
+    {
+
+    }
+    #endregion
+
+    public WeaponModel()
+    {
+        onStartCharge += StartCharge;
+        onEndCharge += EndCharge;
+        onUse += Use;
+        onEndUse += EndUse;
+        onStartCoolDown += StartCoolDown;
+        onEndCoolDown += EndCoolDown;
+        onKill += Kill;
+        onHit += Hit;
+        onMiss += Miss;
+        onPickUp += PickUp;
+        onDrop += Drop;
+        onEquip += Equip;
+    }
+
 }
