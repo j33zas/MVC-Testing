@@ -27,7 +27,7 @@ public class WeaponModel : MonoBehaviour
     [SerializeField] protected Transform[] projectileSpawns;
     [SerializeField] protected float chargeTime = 0;
     [SerializeField] protected string description;
-    [SerializeField] protected string WPNname;
+    [SerializeField] protected string WPNName;
     #endregion
 
     #region MVC

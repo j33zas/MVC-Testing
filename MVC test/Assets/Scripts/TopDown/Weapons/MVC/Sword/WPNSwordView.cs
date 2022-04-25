@@ -5,4 +5,10 @@ using UnityEngine;
 public class WPNSwordView : WeaponView
 {
 
+
+    public override void UseView()
+    {
+        base.UseView();
+
+    }
 }

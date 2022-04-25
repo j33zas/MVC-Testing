@@ -12,11 +12,15 @@ public class WeaponView : MonoBehaviour
     [SerializeField] AudioClip[] sounds;
     protected Dictionary<string, AudioClip> _soundDictionary;
 
-    public WeaponView()
+    protected virtual void Start()
     {
         _SR = GetComponent<SpriteRenderer>();
         _AN = GetComponent<Animator>();
         _AU = GetComponent<AudioSource>();
+        foreach (var S in sounds)
+            AddSound(S);
+        foreach (var P in particles)
+            AddParticle(P);
     }
 
     protected void PlaySound(string name)

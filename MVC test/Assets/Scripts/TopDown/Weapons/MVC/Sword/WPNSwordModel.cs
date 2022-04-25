@@ -7,9 +7,7 @@ public class WPNSwordModel : WeaponModel
     protected override void Use()
     {
         base.Use();
-        foreach (var item in projectileSpawns)
-        {
-            Instantiate(projectilePFs[0], item.position, item.rotation);
-        }
+        Instantiate(projectilePFs[0], projectileSpawns[0].position, projectileSpawns[0].rotation);
+        
     }
 }
