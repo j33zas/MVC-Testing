@@ -82,6 +82,7 @@ public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
         currentDeAcceleration = deAcceleration;
         currentRollCD = 0;
         currentHP = maxHP;
+        _currentWPN = new WPNSwordController(GetComponentInChildren<WPNSwordModel>(), GetComponentInChildren<WPNSwordView>());//para testear
     }
     
     void Update()
@@ -120,7 +121,8 @@ public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
         _AN.SetFloat("Speed", currentSpeed);
         #endregion
 
-        _currentWPN.Listener();
+        if(_currentWPN != null)
+            _currentWPN.Listener();
     }
 
     void Move(Vector2 direction)
@@ -187,7 +189,6 @@ public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
         
     }
 
-
     IEnumerator EndRollinvulnerability(float time)
     {
         yield return new WaitForSeconds(time);
@@ -216,7 +217,7 @@ public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
         }
         else
         {
-            hands.transform.right = -(Vector2)hands.transform.position - screenPoint;
+            hands.transform.right = screenPoint - (Vector2)hands.transform.position;
             if (transform.localScale != new Vector3(1, 1, 1))
                 transform.localScale = new Vector3(1, 1, 1);
         }

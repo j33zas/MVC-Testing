@@ -2,18 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TopDownPlayerController : MonoBehaviour, ITopDownController
+public class TopDownPlayerController : ITopDownController
 {
-    TopDownPlayerModel _model;
-    TopDownPlayerView _view;
+    TopDownPlayerModel _M;
+    TopDownPlayerView _V;
+    Vector2 lastdir;
+
     public TopDownPlayerController(TopDownPlayerView V, TopDownPlayerModel M)
     {
-        _view = V;
-        _model = M;
-        _model.OnLook += _view.LookView;
-        _model.OnMove += _view.LookView;
-        _model.OnStrike += _view.StrikeView;
-        _model.OnRoll += _view.RollView;
+        _V = V;
+        _M = M;
+        _M.OnMove += _V.MoveView;
+        _M.OnLook += _V.LookView;
+        _M.OnMove += _V.LookView;
+        _M.OnRoll += _V.RollView;
+        _M.OnEndRoll += _V.EndRollView;
+        _M.OnUseWeapon += _V.UseWeaponView;
+        _M.OnDodge += _V.DodgeView;
+        _M.OnPickUpWeapon += _V.PickUpWeaponView;
+        _M.OnGetHit += _V.GetHitView;
+        _M.OnDie += _V.DieView;
+        lastdir = Vector2.zero;
     }
 
     public Vector2 GetAxis()
@@ -24,14 +33,12 @@ public class TopDownPlayerController : MonoBehaviour, ITopDownController
 
     public void Listener()
     {
-        _model.OnLook(GetMouseScreenPos());
-
         if(GetAxis() != Vector2.zero)
-            _model.OnMove(GetAxis());
+            lastdir = GetAxis();
 
-        if (Input.GetMouseButton(1))
-            _model.OnRoll();
-        if (Input.GetMouseButton(0))
-            _model.OnStrike();
+        _M.OnMove(GetAxis());
+        _M.OnLook(GetMouseScreenPos());
+        if (Input.GetMouseButtonDown(1))
+            _M.OnRoll(lastdir);
     }
 }

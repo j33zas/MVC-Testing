@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 24d5c8f96877ca84199867fcf59d68a3
+guid: 6f3cf9b4f0909fd4e9109c8c040a223d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: projectiles_0
+      name: Weapons Atlas_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 64
-        height: 64
+        y: 229
+        width: 12
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68f9d742f0e3189468eabdf456b822be
-      internalID: -286960470
+      spriteID: 86fe8ce3e1aff47429ee5111209d90e0
+      internalID: -2096012194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles_1
+      name: Weapons Atlas_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 13
+        y: 229
+        width: 10
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad68eaa0c37b79640813f01814433439
-      internalID: -1619458401
+      spriteID: 8e71a631e452221438ea83a9fead465c
+      internalID: 1161707910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles_2
+      name: Weapons Atlas_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
+        x: 24
+        y: 243
+        width: 7
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed379676dbd6d9146b79353c5c09d27a
-      internalID: -585143120
+      spriteID: 6d43322c185067848bff3d7586697e35
+      internalID: -890832889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles_3
+      name: Weapons Atlas_3
       rect:
         serializedVersion: 2
-        x: 203
-        y: 34
-        width: 8
-        height: 21
+        x: 32
+        y: 224
+        width: 19
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,61 +181,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f59e2db1a37b91a47a5ca8d01e79a04d
-      internalID: -673925333
+      spriteID: 20ada1a27a45ee944a851dce1ae56f16
+      internalID: -1972332104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles_4
+      name: Weapons Atlas_4
       rect:
         serializedVersion: 2
-        x: 218
-        y: 37
-        width: 13
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e80d5f028ad1b346b0d59d60c54d637
-      internalID: 2125412217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: projectiles_5
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 33
-        width: 11
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32962322bb7dbcb40969cda954c876e5
-      internalID: -463999255
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: projectiles_6
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 20
-        width: 16
+        x: 52
+        y: 248
+        width: 68
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -244,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d58b1798c239c8247b33c40860573688
-      internalID: 379405288
+      spriteID: 1bf51501024bee24593b474673775453
+      internalID: -1510742133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projectiles_7
+      name: Weapons Atlas_5
       rect:
         serializedVersion: 2
-        x: 199
-        y: 11
-        width: 13
-        height: 19
+        x: 121
+        y: 216
+        width: 16
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +223,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38091b18c7afc4a49bcc93a826d27b01
-      internalID: -940240372
+      spriteID: c3466378179f35643a43d7caa5095fc1
+      internalID: -284580248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 246
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf6122e7966f2c43b215ccf3ea51853
+      internalID: 285758344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 240
+        width: 58
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0958d5f7711fe459c5bd4612c12213
+      internalID: -1879168596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 203
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276ca24dcafdc1c4684fe44020ee400b
+      internalID: -1507681910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 222
+        width: 44
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec3c69bebc6c1345b75e3b59f0f01a5
+      internalID: 1472057757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 229
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76afa15c08fa9e644b701197a15e257e
+      internalID: -704959019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 213
+        width: 72
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8201feb7026736488cd3b2b04c6622d
+      internalID: -997985109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 118
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41eee831538dd4469be550cef4a07ee
+      internalID: -2108461833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 198
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944ce956545a4424eb6ebf7e937ed525
+      internalID: 1799832463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8073659add526b449b1867ccec0029cd
+      internalID: 2086638502
       vertices: []
       indices: 
       edges: []
@@ -282,14 +429,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      projectiles_7: -940240372
-      projectiles_0: -286960470
-      projectiles_2: -585143120
-      projectiles_6: 379405288
-      projectiles_3: -673925333
-      projectiles_4: 2125412217
-      projectiles_1: -1619458401
-      projectiles_5: -463999255
+      Weapons Atlas_8: -1507681910
+      Weapons Atlas_1: 1161707910
+      Weapons Atlas_0: -2096012194
+      Weapons Atlas_9: 1472057757
+      Weapons Atlas_4: -1510742133
+      Weapons Atlas_10: -704959019
+      Weapons Atlas_14: 2086638502
+      Weapons Atlas_7: -1879168596
+      Weapons Atlas_2: -890832889
+      Weapons Atlas_6: 285758344
+      Weapons Atlas_13: 1799832463
+      Weapons Atlas_12: -2108461833
+      Weapons Atlas_5: -284580248
+      Weapons Atlas_3: -1972332104
+      Weapons Atlas_11: -997985109
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

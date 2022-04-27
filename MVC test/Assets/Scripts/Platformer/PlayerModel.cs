@@ -197,6 +197,7 @@ public class PlayerModel : MonoBehaviour
         }
         _PLVW.SetCanParry(canParry);
         #endregion
+
         #region Shoot Logic
         if (currentShootCD > 0)
         {

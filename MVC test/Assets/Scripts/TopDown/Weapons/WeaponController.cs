@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponController : MonoBehaviour, IWeaponController
+public class WeaponController : IWeaponController
 {
     protected WeaponModel _M;
     protected WeaponView _V;
