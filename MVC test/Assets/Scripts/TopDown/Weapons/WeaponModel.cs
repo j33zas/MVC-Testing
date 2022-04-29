@@ -7,6 +7,7 @@ public class WeaponModel : MonoBehaviour
 {
     #region Actions
     public Action onStartCharge;
+    public Action onStopCharge;
     public Action onEndCharge;
     public Action onUse;
     public Action onEndUse;
@@ -22,10 +23,14 @@ public class WeaponModel : MonoBehaviour
 
     #region stats
     [SerializeField] protected float useCD;
-    [SerializeField] protected int damage;
+    protected float currentCD;
+    [SerializeField] protected int DMG;
+    protected int currentDMG;
     [SerializeField] protected HitBox[] projectilePFs;
     [SerializeField] protected Transform[] projectileSpawns;
     [SerializeField] protected float chargeTime = 0;
+    protected float currentChargeTime;
+    protected bool IsCharged;
     [SerializeField] protected string description;
     [SerializeField] protected string WPNName;
     #endregion
@@ -36,7 +41,19 @@ public class WeaponModel : MonoBehaviour
     #endregion
 
     #region Functions
+    protected virtual void Awake()
+    {
+
+    }
+    protected virtual void Start()
+    {
+
+    }
     protected virtual void StartCharge()
+    {
+
+    }
+    protected virtual void StopCharge()
     {
 
     }
@@ -89,6 +106,7 @@ public class WeaponModel : MonoBehaviour
     public WeaponModel()
     {
         onStartCharge += StartCharge;
+        onStopCharge += StopCharge;
         onEndCharge += EndCharge;
         onUse += Use;
         onEndUse += EndUse;

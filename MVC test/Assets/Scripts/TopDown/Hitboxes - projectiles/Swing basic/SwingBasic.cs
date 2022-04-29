@@ -8,6 +8,6 @@ public class SwingBasic : HitBox
     {
         base.Awake();
         myBehaviour = new SwingBasicBehaviour();
-        Destroy(gameObject, lifetime);
+        myBehaviour.SpawnIn(this);
     }
 }

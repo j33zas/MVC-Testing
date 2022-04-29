@@ -12,6 +12,15 @@ public class WeaponView : MonoBehaviour
     [SerializeField] AudioClip[] sounds;
     protected Dictionary<string, AudioClip> _soundDictionary;
 
+    bool isCharged;
+    public bool charged
+    {
+        get
+        { return isCharged; }
+        set
+        { isCharged = value;}
+    }
+
     protected virtual void Start()
     {
         _SR = GetComponent<SpriteRenderer>();
@@ -50,6 +59,10 @@ public class WeaponView : MonoBehaviour
     }
 
     virtual public void StartChargeView()
+    {
+
+    }
+    virtual public void StopChargeView()
     {
 
     }

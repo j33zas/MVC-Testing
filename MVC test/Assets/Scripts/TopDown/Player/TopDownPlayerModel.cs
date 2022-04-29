@@ -9,7 +9,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     TopDownPlayerView view;
     TopDownPlayerController controller;
     Rigidbody2D _RB2D;
-    [SerializeField] GameObject hands;
+    GameObject hands;
     WeaponController currentWeapon;
     List<WeaponController> weaponInventory = new List<WeaponController>();
     #endregion
@@ -48,9 +48,12 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     public Action<int,float, Vector2, GameObject> OnGetHit;
     public Action<GameObject> OnDie;
     #endregion
+
     private void Awake()
     {
+
     }
+
     public void Start()
     {
         view = GetComponentInChildren<TopDownPlayerView>();
@@ -72,6 +75,9 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
         currentHP = maxHP;
         currentAcceleration = acceleration;
         currentDeAcceleration = deAcceleration;
+
+        currentWeapon = new WPNBowController(GetComponentInChildren<WPNBowModel>(), GetComponentInChildren<WPNBowView>());
+        hands = GetComponentInChildren<WPNBowModel>().gameObject;
     }
     private void Update()
     {

@@ -20,6 +20,7 @@ public class WeaponController : IWeaponController
         _M.onMiss += _V.MissView;
         _M.onPickUp += _V.PickUpView;
         _M.onStartCharge += _V.StartChargeView;
+        _M.onStopCharge += _V.StopChargeView;
         _M.onStartCoolDown += _V.StartCoolDownView;
         _M.onUse += _V.UseView;
     }
