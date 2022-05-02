@@ -11,6 +11,14 @@ public class WPNBowModel : WeaponModel
     {
         base.Start();
         V = GetComponentInChildren<WPNBowView>();
+        owner = GetComponentInParent<TopDownPlayerModel>();//altamente mal, hacer en pickup del player
+    }
+    protected override void LookAt(Vector3 point, Vector3 position)
+    {
+        if (point.x > position.x)
+            transform.right = Vector2.Lerp(transform.right, (Vector2)point - (Vector2)transform.position, Time.deltaTime);
+        else if (point.x < position.x)
+            transform.right = Vector2.Lerp(transform.right, -(Vector2)point + (Vector2)transform.position, Time.deltaTime);
     }
     protected override void EndCharge()
     {
@@ -29,6 +37,7 @@ public class WPNBowModel : WeaponModel
     {
         var B = Instantiate(projectilePFs[0], projectileSpawns[0].transform.position, projectileSpawns[0].transform.rotation);
         B.dmg = currentDMG;
+        B.owner = owner.gameObject;
         currentChargeTime = 0;
         onEndUse();
     }

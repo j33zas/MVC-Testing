@@ -6,10 +6,13 @@ public class WeaponController : IWeaponController
 {
     protected WeaponModel _M;
     protected WeaponView _V;
-    public WeaponController(WeaponModel M, WeaponView V)
+    protected TopDownPlayerModel _P;
+    public WeaponController(WeaponModel M, WeaponView V, TopDownPlayerModel P)
     {
         _M = M;
         _V = V;
+        _P = P;
+        _M.OnLook += _V.LookAtView;
         _M.onDrop += _V.DropView;
         _M.onEndCharge += _V.EndChargeView;
         _M.onEndCoolDown += _V.EndCoolDownView;

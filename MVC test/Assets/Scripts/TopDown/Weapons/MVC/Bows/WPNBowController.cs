@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WPNBowController : WeaponController
 {
-    public WPNBowController(WeaponModel M, WeaponView V) : base(M, V){}
+    public WPNBowController(WeaponModel M, WeaponView V, TopDownPlayerModel P) : base(M, V, P){}
 
     public override void Listener()
     {
@@ -14,5 +14,6 @@ public class WPNBowController : WeaponController
         if (Input.GetMouseButtonUp(0))
             _M.onStopCharge();
 
+        _M.OnLook(Camera.main.ScreenToWorldPoint(Input.mousePosition), _P.transform.position);
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
 {
@@ -34,6 +35,11 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     float currentRollCD;
     bool canRoll;
     bool isRolling;
+    [Header("camera")]
+    [SerializeField] Camera cam;
+    [SerializeField] float cameraMaxDistance;
+    [SerializeField] float cameraLerpSpeed;
+    Vector2 mouseOnWorld = Vector2.zero;
 
     #endregion
 
@@ -76,28 +82,32 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
         currentAcceleration = acceleration;
         currentDeAcceleration = deAcceleration;
 
-        currentWeapon = new WPNBowController(GetComponentInChildren<WPNBowModel>(), GetComponentInChildren<WPNBowView>());
-        hands = GetComponentInChildren<WPNBowModel>().gameObject;
+        currentWeapon = new WPNBowController(GetComponentInChildren<WPNBowModel>(), GetComponentInChildren<WPNBowView>(), this);
+        cam = Camera.main;
     }
     private void Update()
     {
-        if(controller != null)
+        if (controller != null)
+        {
             controller.Listener();
+        }
+
+        if (currentWeapon != default)
+        {
+            currentWeapon.Listener();
+        }
 
         if (!canRoll)
         {
             currentRollCD += Time.deltaTime;
-            if(currentRollCD >= rollCD)
+            if (currentRollCD >= rollCD)
             {
                 canRoll = true;
                 currentRollCD = 0;
             }
         }
-
-        if(currentWeapon != default)
-        {
-            currentWeapon.Listener();
-        }
+        if(cam != null)
+            CameraPositioning(cam.ScreenToWorldPoint(Input.mousePosition));
     }
 
     #region functions
@@ -129,20 +139,21 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
         if (isRolling) return;
         if (point.x < transform.position.x)
         {
-            hands.transform.right = (Vector2)hands.transform.position - point;
-
             if (transform.localScale != new Vector3(-1, 1, 1))
                 transform.localScale = new Vector3(-1, 1, 1);
         }
         else
         {
-            hands.transform.right = point - (Vector2)hands.transform.position;
             if (transform.localScale != new Vector3(1, 1, 1))
                 transform.localScale = new Vector3(1, 1, 1);
         }
-
     }
-
+    void CameraPositioning(Vector2 P)
+    {
+        Vector2 middlePoint = (P - (Vector2)transform.position)/ 2 / cameraMaxDistance;
+        cam.transform.position = Vector2.Lerp(cam.transform.position, middlePoint + (Vector2)transform.position, Time.deltaTime * cameraLerpSpeed);
+        cam.transform.position += new Vector3(0, 0, -1);
+    }
     void Roll(Vector2 dir)
     {
         if (!canRoll) return;

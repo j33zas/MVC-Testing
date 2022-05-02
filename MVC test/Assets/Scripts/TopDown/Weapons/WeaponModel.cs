@@ -6,6 +6,7 @@ using UnityEngine;
 public class WeaponModel : MonoBehaviour
 {
     #region Actions
+    public Action<Vector3, Vector3> OnLook;
     public Action onStartCharge;
     public Action onStopCharge;
     public Action onEndCharge;
@@ -22,6 +23,18 @@ public class WeaponModel : MonoBehaviour
     #endregion
 
     #region stats
+    TopDownPlayerModel _O;
+    public TopDownPlayerModel owner
+    {
+        get
+        {
+            return _O;
+        }
+        set
+        {
+            _O = value;
+        }
+    }
     [SerializeField] protected float useCD;
     protected float currentCD;
     [SerializeField] protected int DMG;
@@ -35,10 +48,23 @@ public class WeaponModel : MonoBehaviour
     [SerializeField] protected string WPNName;
     #endregion
 
-    #region MVC
-    [SerializeField] protected WeaponView _WV;
-    [SerializeField] protected WeaponController _WC;
-    #endregion
+    public WeaponModel()
+    {
+        OnLook += LookAt;
+        onStartCharge += StartCharge;
+        onStopCharge += StopCharge;
+        onEndCharge += EndCharge;
+        onUse += Use;
+        onEndUse += EndUse;
+        onStartCoolDown += StartCoolDown;
+        onEndCoolDown += EndCoolDown;
+        onKill += Kill;
+        onHit += Hit;
+        onMiss += Miss;
+        onPickUp += PickUp;
+        onDrop += Drop;
+        onEquip += Equip;
+    }
 
     #region Functions
     protected virtual void Awake()
@@ -46,6 +72,10 @@ public class WeaponModel : MonoBehaviour
 
     }
     protected virtual void Start()
+    {
+
+    }
+    protected virtual void LookAt(Vector3 point, Vector3 position)
     {
 
     }
@@ -102,22 +132,4 @@ public class WeaponModel : MonoBehaviour
 
     }
     #endregion
-
-    public WeaponModel()
-    {
-        onStartCharge += StartCharge;
-        onStopCharge += StopCharge;
-        onEndCharge += EndCharge;
-        onUse += Use;
-        onEndUse += EndUse;
-        onStartCoolDown += StartCoolDown;
-        onEndCoolDown += EndCoolDown;
-        onKill += Kill;
-        onHit += Hit;
-        onMiss += Miss;
-        onPickUp += PickUp;
-        onDrop += Drop;
-        onEquip += Equip;
-    }
-
 }

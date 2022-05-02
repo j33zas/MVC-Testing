@@ -57,7 +57,10 @@ public class WeaponView : MonoBehaviour
         _soundDictionary.Add(A.name, A);
         return this;
     }
+    virtual public void LookAtView(Vector3 point, Vector3 positionRef)
+    {
 
+    }
     virtual public void StartChargeView()
     {
 

@@ -1551,11 +1551,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1523135825 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2513886735795747988, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-  m_PrefabInstance: {fileID: 6374684486621846061}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1809751938
 GameObject:
   m_ObjectHideFlags: 0
@@ -65333,7 +65328,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1941967921
 MonoBehaviour:
@@ -65347,9 +65342,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AssetsPPU: 32
-  m_RefResolutionX: 320
-  m_RefResolutionY: 180
+  m_AssetsPPU: 16
+  m_RefResolutionX: 208
+  m_RefResolutionY: 117
   m_UpscaleRT: 0
   m_PixelSnapping: 0
   m_CropFrameX: 0
@@ -70559,25 +70554,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2024641680344573577, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-      propertyPath: m_Size.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2024641680344573577, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-      propertyPath: m_Size.y
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2024641680344573577, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2024641680344573577, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 2024641680344573580, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2024641680344573580, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -70619,45 +70598,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2024641680344573645, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1941967919}
-    - target: {fileID: 2024641680344573645, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-      propertyPath: rollForce
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 2024641680344573682, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
       propertyPath: m_Name
       value: PLAYER MODEL - TopDown
       objectReference: {fileID: 0}
-    - target: {fileID: 2503051422519953498, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-      propertyPath: m_Name
-      value: Weapon - Sword
-      objectReference: {fileID: 0}
     - target: {fileID: 4758410019491581598, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-      propertyPath: hands
-      value: 
-      objectReference: {fileID: 1523135825}
-    - target: {fileID: 4758410019491581598, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-      propertyPath: rollCD
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4758410019491581598, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-      propertyPath: rollForce
-      value: 0.05
+      propertyPath: maxSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4758410019491581598, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
       propertyPath: acceleration
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4758410019491581598, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-      propertyPath: rollInvulnerableTime
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6374684487999270454, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: cameraLerpSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}

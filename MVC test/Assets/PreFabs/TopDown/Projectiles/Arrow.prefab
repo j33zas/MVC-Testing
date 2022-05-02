@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 3
-  speed: 24
+  speed: 32
   knockBack: 0
   knockBackDirection: {x: 0, y: 0}
 --- !u!61 &1513575769490717728

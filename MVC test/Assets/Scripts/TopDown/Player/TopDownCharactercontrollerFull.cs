@@ -82,7 +82,7 @@ public class TopDownCharactercontrollerFull : MonoBehaviour, IDMGReceiver
         currentDeAcceleration = deAcceleration;
         currentRollCD = 0;
         currentHP = maxHP;
-        _currentWPN = new WPNSwordController(GetComponentInChildren<WPNSwordModel>(), GetComponentInChildren<WPNSwordView>());//para testear
+        //_currentWPN = new WPNSwordController(GetComponentInChildren<WPNSwordModel>(), GetComponentInChildren<WPNSwordView>());//para testear
     }
     
     void Update()

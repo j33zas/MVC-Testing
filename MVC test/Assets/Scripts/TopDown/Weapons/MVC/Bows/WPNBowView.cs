@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class WPNBowView : WeaponView
 {
+
+    public override void LookAtView(Vector3 point, Vector3 positionRef)
+    {
+        if(point.y < positionRef.y)
+            _SR.sortingLayerName = "AbovePlayer";
+        else if(point.y > positionRef.y)
+            _SR.sortingLayerName = "BehindPlayer";
+    }
     public override void EndChargeView()
     {
         _SR.color = Color.red;
