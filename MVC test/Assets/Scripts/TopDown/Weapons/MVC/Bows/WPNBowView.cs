@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WPNBowView : WeaponView
 {
-
     public override void LookAtView(Vector3 point, Vector3 positionRef)
     {
         if(point.y < positionRef.y)
@@ -14,25 +13,33 @@ public class WPNBowView : WeaponView
     }
     public override void EndChargeView()
     {
-        _SR.color = Color.red;
+        StartCoroutine(Shake(1f,.3f));
     }
     public override void StartChargeView()
     {
         if (!charged)
-            _SR.color = Color.blue;
+        {
+            _AN.SetBool("Charging", true);
+        }
     }
     public override void StopChargeView()
     {
-        _SR.color = Color.white;
         charged = false;
+        _AN.SetTrigger("StoppedCharge");
+        _AN.SetBool("Charging", false);
     }
     public override void UseView()
     {
-        if(charged)
-            _SR.color = Color.black;
+        _AN.SetTrigger("Shoot");
     }
     public override void EndUseView()
     {
-        _SR.color = Color.white;
+        _AN.SetBool("Charging", false);
+    }
+    IEnumerator Shake(float intensity, float interval, int mult = 1)
+    {
+        transform.position += new Vector3(0, 1) * mult * intensity * Time.deltaTime;
+        yield return new WaitForSeconds(interval);
+        StartCoroutine(Shake(intensity, interval, -mult));
     }
 }

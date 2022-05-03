@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bow Shoot Animation_0
+      name: AN_WPN_Bow_Shoot_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b09dea761d1aa447995c63d29a44b59
-      internalID: -1881649782
+      spriteID: ab9f6fefc918926488efa56bae754e33
+      internalID: 966525932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bow Shoot Animation_1
+      name: AN_WPN_Bow_Shoot_1
       rect:
         serializedVersion: 2
         x: 128
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c213fcf4057a04409c27f8b6745e255
-      internalID: 288061096
+      spriteID: 0d940021c78ff6a4090984151d0370f7
+      internalID: 860878765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bow Shoot Animation_2
+      name: AN_WPN_Bow_Shoot_2
       rect:
         serializedVersion: 2
         x: 256
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83335938d42622b47985e18cefc850b3
-      internalID: 807933232
+      spriteID: ee539366a367d414082043e6ee3c5511
+      internalID: 43214434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bow Shoot Animation_3
+      name: AN_WPN_Bow_Shoot_3
       rect:
         serializedVersion: 2
         x: 384
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d83ef29322d76f47aebcde4d6ea6e3c
-      internalID: 546354375
+      spriteID: e876fbb0a0080ee43ad82bd28239b5e5
+      internalID: 69190475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bow Shoot Animation_4
+      name: AN_WPN_Bow_Shoot_4
       rect:
         serializedVersion: 2
         x: 512
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34e04f901e8cdc54583a2a1ba5ca800d
-      internalID: -2092502123
+      spriteID: dc29b1895815ac247832f4761d4067c3
+      internalID: -194390034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bow Shoot Animation_5
+      name: AN_WPN_Bow_Shoot_5
       rect:
         serializedVersion: 2
         x: 640
@@ -223,71 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d57bdb2c38c5cf40b6ee72c5191ad09
-      internalID: -1293443574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bow Shoot Animation_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4389d4290d69c01438c2048815bfca9f
-      internalID: 1609911274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bow Shoot Animation_7
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ace86db840b354d47ab220ce0a5cf6b7
-      internalID: -499295435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bow Shoot Animation_8
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5947c01926944274c8d6d989dc634ad8
-      internalID: 133150290
+      spriteID: 618b442eba4278d41a9d509030456376
+      internalID: 1502455763
       vertices: []
       indices: 
       edges: []
@@ -303,15 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bow Shoot Animation_3: 546354375
-      Bow Shoot Animation_6: 1609911274
-      Bow Shoot Animation_1: 288061096
-      Bow Shoot Animation_2: 807933232
-      Bow Shoot Animation_0: -1881649782
-      Bow Shoot Animation_7: -499295435
-      Bow Shoot Animation_8: 133150290
-      Bow Shoot Animation_5: -1293443574
-      Bow Shoot Animation_4: -2092502123
+      AN_WPN_Bow_Shoot_0: 966525932
+      AN_WPN_Bow_Shoot_5: 1502455763
+      AN_WPN_Bow_Shoot_2: 43214434
+      AN_WPN_Bow_Shoot_3: 69190475
+      AN_WPN_Bow_Shoot_4: -194390034
+      AN_WPN_Bow_Shoot_1: 860878765
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
