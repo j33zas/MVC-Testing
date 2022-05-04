@@ -63,7 +63,7 @@ public class HitBox : MonoBehaviour
         if(dmgreceiver != null)
             dmgreceiver.GetHit(dmg, knockBack, knockBackDirection, _O);
 
-        if (coll.gameObject != _O)
+        if (coll.gameObject != _O || coll.gameObject.GetType() != GetType())
             gameObject.SetActive(false);
     }
 }

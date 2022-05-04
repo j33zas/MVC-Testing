@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class WPNBowView : WeaponView
 {
-    public override void LookAtView(Vector3 point, Vector3 positionRef)
+    [SerializeField] float shakeInterval;
+    [SerializeField] float shakeForce;
+    Vector3 startPos = Vector3.zero;
+    void Awake()
     {
-        if(point.y < positionRef.y)
-            _SR.sortingLayerName = "AbovePlayer";
-        else if(point.y > positionRef.y)
-            _SR.sortingLayerName = "BehindPlayer";
+        currentChargeWPNCanvas = Instantiate(chargeWPNCanvas,transform.parent);
     }
+
     public override void EndChargeView()
     {
-        StartCoroutine(Shake(1f,.3f));
+        StartCoroutine(Shake(shakeForce,shakeInterval));
     }
     public override void StartChargeView()
     {
         if (!charged)
         {
             _AN.SetBool("Charging", true);
+            currentChargeWPNCanvas.SetCharge();
         }
     }
     public override void StopChargeView()
@@ -27,6 +29,7 @@ public class WPNBowView : WeaponView
         charged = false;
         _AN.SetTrigger("StoppedCharge");
         _AN.SetBool("Charging", false);
+        currentChargeWPNCanvas.ResetCharge();
     }
     public override void UseView()
     {
@@ -35,10 +38,14 @@ public class WPNBowView : WeaponView
     public override void EndUseView()
     {
         _AN.SetBool("Charging", false);
+        StopAllCoroutines();
+        transform.localPosition = startPos;
+        currentChargeWPNCanvas.ResetCharge();
+        Debug.Log("stopped using");
     }
     IEnumerator Shake(float intensity, float interval, int mult = 1)
     {
-        transform.position += new Vector3(0, 1) * mult * intensity * Time.deltaTime;
+        transform.position += new Vector3(0, 1) * mult * intensity;
         yield return new WaitForSeconds(interval);
         StartCoroutine(Shake(intensity, interval, -mult));
     }

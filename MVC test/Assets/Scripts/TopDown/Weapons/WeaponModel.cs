@@ -77,7 +77,10 @@ public class WeaponModel : MonoBehaviour
     }
     protected virtual void LookAt(Vector3 point, Vector3 position)
     {
-
+        if (point.x > position.x)
+            transform.right = Vector2.Lerp(transform.right, (Vector2)point - (Vector2)transform.position, Time.deltaTime);
+        else if (point.x < position.x)
+            transform.right = Vector2.Lerp(transform.right, -(Vector2)point + (Vector2)transform.position, Time.deltaTime);
     }
     protected virtual void StartCharge()
     {

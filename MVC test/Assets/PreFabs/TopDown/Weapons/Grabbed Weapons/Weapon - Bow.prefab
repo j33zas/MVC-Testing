@@ -82,7 +82,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3017963573165489490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.03118977}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -155,6 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particles: []
   sounds: []
+  chargeWPNCanvas: {fileID: 5744520088706031486, guid: 328bc80384ca2184895f96861d6b6418, type: 3}
+  shakeInterval: 0.05
+  shakeForce: 0.1
 --- !u!95 &4794385354768004859
 Animator:
   serializedVersion: 4

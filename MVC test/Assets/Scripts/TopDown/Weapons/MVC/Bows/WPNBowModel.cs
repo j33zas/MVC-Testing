@@ -11,20 +11,15 @@ public class WPNBowModel : WeaponModel
     {
         base.Start();
         V = GetComponentInChildren<WPNBowView>();
+        V.HUD.charge = chargeTime;
         owner = GetComponentInParent<TopDownPlayerModel>();//altamente mal, hacer en pickup del player
     }
-    protected override void LookAt(Vector3 point, Vector3 position)
-    {
-        if (point.x > position.x)
-            transform.right = Vector2.Lerp(transform.right, (Vector2)point - (Vector2)transform.position, Time.deltaTime);
-        else if (point.x < position.x)
-            transform.right = Vector2.Lerp(transform.right, -(Vector2)point + (Vector2)transform.position, Time.deltaTime);
-    }
+
     protected override void EndCharge()
     {
         IsCharged = true;
-        currentChargeTime = chargeTime;
         V.charged = IsCharged;
+        currentChargeTime = chargeTime;
         currentChargeTime = 0;
     }
     protected override void StopCharge()

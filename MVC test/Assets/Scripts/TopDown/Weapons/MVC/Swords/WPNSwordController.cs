@@ -16,5 +16,6 @@ public class WPNSwordController : WeaponController
         {
             _M.onUse();
         }
+        _M.OnLook(Camera.main.ScreenToWorldPoint(Input.mousePosition), _P.transform.position);
     }
 }

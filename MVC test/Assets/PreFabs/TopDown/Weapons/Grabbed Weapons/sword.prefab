@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5250241406305198579}
   - component: {fileID: 3011174469094446885}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particles: []
   sounds: []
+  chargeWPNCanvas: {fileID: 0}
 --- !u!1 &7475119451955384692
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCD: 1
-  damage: 3
+  DMG: 0
   projectilePFs:
   - {fileID: 3594007850893368201, guid: a47856bf12e73814cbe26ebba4cfb31b, type: 3}
   projectileSpawns:
@@ -185,4 +186,3 @@ MonoBehaviour:
   chargeTime: 0
   description: 
   WPNName: 
-  _WV: {fileID: 0}

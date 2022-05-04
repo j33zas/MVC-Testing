@@ -11,7 +11,15 @@ public class WeaponView : MonoBehaviour
     protected Dictionary<string, ParticleSystem> _partDictionary;
     [SerializeField] AudioClip[] sounds;
     protected Dictionary<string, AudioClip> _soundDictionary;
-
+    [SerializeField] protected ChargeWeaponHUD chargeWPNCanvas;
+    protected ChargeWeaponHUD currentChargeWPNCanvas;
+    public ChargeWeaponHUD HUD
+    {
+        get
+        {
+            return currentChargeWPNCanvas;
+        }
+    }
     bool isCharged;
     public bool charged
     {
@@ -59,8 +67,12 @@ public class WeaponView : MonoBehaviour
     }
     virtual public void LookAtView(Vector3 point, Vector3 positionRef)
     {
-
-    }
+        if (point.y < positionRef.y)
+            _SR.sortingLayerName = "AbovePlayer";
+        else if (point.y > positionRef.y)
+            _SR.sortingLayerName = "BehindPlayer";
+    }           
+    
     virtual public void StartChargeView()
     {
 
