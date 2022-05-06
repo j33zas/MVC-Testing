@@ -40,5 +40,7 @@ public class TopDownPlayerController : ITopDownController
         _M.OnLook(GetMouseScreenPos());
         if (Input.GetMouseButtonDown(1))
             _M.OnRoll(lastdir);
+        if (Input.GetKeyDown(KeyCode.E))
+            _M.OnPickUpWeapon();
     }
 }

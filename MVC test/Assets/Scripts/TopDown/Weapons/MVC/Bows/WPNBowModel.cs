@@ -11,7 +11,8 @@ public class WPNBowModel : WeaponModel
     {
         base.Start();
         V = GetComponentInChildren<WPNBowView>();
-        V.HUD.charge = chargeTime;
+        if(V)
+            V.HUD.charge = chargeTime;
         owner = GetComponentInParent<TopDownPlayerModel>();//altamente mal, hacer en pickup del player
     }
 
