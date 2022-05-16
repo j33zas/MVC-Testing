@@ -44,7 +44,7 @@ public class HitBox : MonoBehaviour
         if (myBehaviour != null)
             myBehaviour.SpawnIn(this);
         else
-            Debug.LogError("Hitbox " + name + " has no IHitBoxBehavour assigned and couldn´t start properly");
+            Debug.LogError("Hitbox " + name + " has no HitBox Behavour assigned and couldn´t start properly");
     }
 
     virtual protected void Update()
@@ -59,11 +59,16 @@ public class HitBox : MonoBehaviour
     }
     virtual protected void OnTriggerEnter2D(Collider2D coll)
     {
-        var dmgreceiver = coll.gameObject.GetComponent<IDMGReceiver>();
-        if(dmgreceiver != null)
-            dmgreceiver.GetHit(dmg, knockBack, knockBackDirection, _O);
-
-        if (coll.gameObject != _O || coll.gameObject.GetType() != GetType())
-            gameObject.SetActive(false);
+        if(coll.gameObject != _O || coll.GetType() != GetType())
+        {
+            var dmgreceiver = coll.gameObject.GetComponent<IDMGReceiver>();
+            if(dmgreceiver != null)
+            {
+                dmgreceiver.GetHit(dmg, knockBack, knockBackDirection, _O);
+                Debug.Log("damage");
+            }
+        }
+        //if (coll.gameObject != _O || coll.gameObject.GetType() != GetType())
+            //gameObject.SetActive(false);
     }
 }

@@ -10,4 +10,9 @@ public class SwingBasic : HitBox
         myBehaviour = new SwingBasicBehaviour();
         myBehaviour.SpawnIn(this);
     }
+
+    protected override void OnTriggerEnter2D(Collider2D coll)
+    {
+        base.OnTriggerEnter2D(coll);
+    }
 }
