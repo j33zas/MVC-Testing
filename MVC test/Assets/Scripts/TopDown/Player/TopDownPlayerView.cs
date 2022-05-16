@@ -12,6 +12,10 @@ public class TopDownPlayerView : MonoBehaviour
     [SerializeField] AudioClip[] sounds;
     protected Dictionary<string, AudioClip> _soundDictionary;
 
+    [Header("camera")]
+    [SerializeField] float cameraMaxDistance;
+    [SerializeField] float cameraLerpSpeed;
+
     private void Awake()
     {
         _SR = GetComponent<SpriteRenderer>();
@@ -68,7 +72,7 @@ public class TopDownPlayerView : MonoBehaviour
 
     public void LookView(Vector2 v2)
     {
-
+        //CameraController.controller.CameraPositioning(v2, cameraMaxDistance, cameraLerpSpeed, gameObject);
     }
 
     public void RollView(Vector2 dir)

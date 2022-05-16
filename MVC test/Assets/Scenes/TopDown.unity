@@ -65324,6 +65324,7 @@ GameObject:
   - component: {fileID: 1941967919}
   - component: {fileID: 1941967918}
   - component: {fileID: 1941967921}
+  - component: {fileID: 1941967922}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -65417,6 +65418,18 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!114 &1941967922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941967917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be1887f6d751bf4394388916bfcc900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2122536605
 GameObject:
   m_ObjectHideFlags: 0
@@ -70499,6 +70512,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1117398254226748565, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
+      propertyPath: cameraLerpSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1117398254226748565, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
+      propertyPath: cameraMaxDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2024641680344573580, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -70554,6 +70575,38 @@ PrefabInstance:
     - target: {fileID: 2513886734688004560, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
       propertyPath: shakeInterval
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221924591376964721, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
+      propertyPath: shakeTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221924591376964721, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
+      propertyPath: WPNShakeForce
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221924591376964721, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
+      propertyPath: numebrOfShakes
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221924591376964721, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
+      propertyPath: shakeIntensity
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221924591376964721, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
+      propertyPath: cameraShakeTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221924591376964721, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
+      propertyPath: WPNShakeInterval
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221924591376964721, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
+      propertyPath: cameraShakeIntensity
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221924591376964721, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
+      propertyPath: numebrOfCameraShakes
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4758410019491581598, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
       propertyPath: maxSpeed

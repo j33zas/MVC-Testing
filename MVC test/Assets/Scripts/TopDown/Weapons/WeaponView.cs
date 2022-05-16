@@ -28,6 +28,12 @@ public class WeaponView : MonoBehaviour
         set
         { isCharged = value;}
     }
+    [SerializeField] protected float cameraShakeTime;
+    [SerializeField] protected float cameraShakeIntensity;
+    [SerializeField] protected int numebrOfCameraShakes;
+
+    [SerializeField] protected float WPNShakeInterval;
+    [SerializeField] protected float WPNShakeForce;
 
     protected virtual void Start()
     {
@@ -124,5 +130,11 @@ public class WeaponView : MonoBehaviour
     virtual public void EquipView()
     {
 
+    }
+    virtual protected IEnumerator ShakeMe(float intensity, float interval, int mult = 1)
+    {
+        transform.position += new Vector3(0, 1) * mult * intensity;
+        yield return new WaitForSeconds(interval);
+        StartCoroutine(ShakeMe(intensity, interval, -mult));
     }
 }

@@ -10,6 +10,7 @@ public class WPNSwordView : WeaponView
         _SR.flipX = !_SR.flipX;
         _SR.color = Color.cyan;
         StartCoroutine(DelayChangeColor(.1f));
+        CameraController.controller.CameraShake(numebrOfCameraShakes, cameraShakeIntensity, cameraShakeTime, new Vector2(1, 1));
     }
 
     IEnumerator DelayChangeColor(float time)

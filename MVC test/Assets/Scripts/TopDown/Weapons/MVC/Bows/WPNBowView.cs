@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class WPNBowView : WeaponView
 {
-    [SerializeField] float shakeInterval;
-    [SerializeField] float shakeForce;
+
     Vector3 startPos = Vector3.zero;
     void Awake()
     {
@@ -14,7 +13,7 @@ public class WPNBowView : WeaponView
 
     public override void EndChargeView()
     {
-        StartCoroutine(Shake(shakeForce,shakeInterval));
+        StartCoroutine(ShakeMe(WPNShakeForce,WPNShakeInterval));
     }
     public override void StartChargeView()
     {
@@ -34,6 +33,7 @@ public class WPNBowView : WeaponView
     public override void UseView()
     {
         _AN.SetTrigger("Shoot");
+        CameraController.controller.CameraShake(numebrOfCameraShakes, cameraShakeIntensity, cameraShakeTime , new Vector2(1, 1));
     }
     public override void EndUseView()
     {
@@ -43,10 +43,5 @@ public class WPNBowView : WeaponView
         currentChargeWPNCanvas.ResetCharge();
         Debug.Log("stopped using");
     }
-    IEnumerator Shake(float intensity, float interval, int mult = 1)
-    {
-        transform.position += new Vector3(0, 1) * mult * intensity;
-        yield return new WaitForSeconds(interval);
-        StartCoroutine(Shake(intensity, interval, -mult));
-    }
+
 }
