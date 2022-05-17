@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 9133081814411156127}
   - component: {fileID: 1513575769490717728}
   m_Layer: 0
-  m_Name: Arrow
+  m_Name: Projectile-BasicArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -44,7 +44,7 @@ public class WPNHammerModel : WeaponModel
 
     protected override void Use()
     {
-        var B = Instantiate(projectilePFs[0], projectileSpawns[0].transform.position, projectileSpawns[0].transform.rotation);
+        var B = Instantiate(projectilePFs[0], projectileSpawns[0].transform.position, Quaternion.identity);
         B.dmg = currentDMG;
         B.owner = owner.gameObject;
         currentChargeTime = 0;

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6230939684806146617}
   - component: {fileID: 3594007850893368201}
   m_Layer: 0
-  m_Name: Projectile-Swing Heavy
+  m_Name: Projectile-Swing Long
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
