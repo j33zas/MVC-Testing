@@ -41,10 +41,11 @@ public class WPNBowModel : WeaponModel
     {
         IsCharged = false;
         V.charged = IsCharged;
+        currentCD = useCD;
     }
     protected override void StartCharge()
     {
-        if(!IsCharged)
+        if(!IsCharged && canBeUsed)
         {
             currentChargeTime += Time.deltaTime;
             if(currentChargeTime >= chargeTime)

@@ -20,6 +20,10 @@ public class ChargeWeaponHUD : MonoBehaviour
             _totalCharge = value;
         }
     }
+    private void Awake()
+    {
+        GetComponentInChildren<Canvas>().sortingLayerName = "AbovePlayer";
+    }
     public void SetCharge()
     {
         currentCharge += Time.deltaTime;

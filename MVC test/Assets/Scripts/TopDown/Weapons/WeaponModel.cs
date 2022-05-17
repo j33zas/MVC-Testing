@@ -37,6 +37,7 @@ public class WeaponModel : MonoBehaviour
     }
     [SerializeField] protected float useCD;
     protected float currentCD;
+    protected bool canBeUsed;
     [SerializeField] protected int DMG;
     protected int currentDMG;
     [SerializeField] protected HitBox[] projectilePFs;
@@ -69,11 +70,26 @@ public class WeaponModel : MonoBehaviour
     #region Functions
     protected virtual void Awake()
     {
-
+        currentCD = 0;
+        canBeUsed = true;
     }
     protected virtual void Start()
     {
 
+    }
+    protected virtual void Update()
+    {
+        if (currentCD > 0)
+        {
+            if (currentCD == useCD)
+                onStartCoolDown();
+            currentCD -= Time.deltaTime;
+        }
+        else if (currentCD != 0)
+        {
+            currentCD = 0;
+            onEndCoolDown();
+        }
     }
     protected virtual void LookAt(Vector3 point, Vector3 position)
     {
@@ -104,11 +120,11 @@ public class WeaponModel : MonoBehaviour
     }
     protected virtual void StartCoolDown()
     {
-
+        canBeUsed = false;
     }
     protected virtual void EndCoolDown()
     {
-
+        canBeUsed = true;
     }
     protected virtual void Kill()
     {

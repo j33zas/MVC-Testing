@@ -20,13 +20,25 @@ public class WeaponView : MonoBehaviour
             return currentChargeWPNCanvas;
         }
     }
-    bool isCharged;
+    bool isCharged = false;
     public bool charged
     {
         get
         { return isCharged; }
         set
         { isCharged = value;}
+    }
+    bool canBeUsed = true;
+    public bool usable
+    {
+        get
+        {
+            return canBeUsed;
+        }
+        set
+        {
+            canBeUsed = value;
+        }
     }
     [SerializeField] protected float cameraShakeTime;
     [SerializeField] protected float cameraShakeIntensity;
@@ -101,11 +113,11 @@ public class WeaponView : MonoBehaviour
     }
     virtual public void StartCoolDownView()
     {
-
+        _SR.color = Color.gray;
     }
     virtual public void EndCoolDownView()
     {
-
+        _SR.color = Color.white;
     }
     virtual public void KillEnemyView()
     {

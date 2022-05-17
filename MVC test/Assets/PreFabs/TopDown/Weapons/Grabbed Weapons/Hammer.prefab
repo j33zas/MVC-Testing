@@ -49,10 +49,10 @@ MonoBehaviour:
   useCD: 1
   DMG: 8
   projectilePFs:
-  - {fileID: 3594007850893368201, guid: a47856bf12e73814cbe26ebba4cfb31b, type: 3}
+  - {fileID: 3594007850893368201, guid: b41e33f0ea569b34ba74c6d3453aa7fa, type: 3}
   projectileSpawns:
   - {fileID: 8021497411032679282}
-  chargeTime: 3
+  chargeTime: 2
   description: 
   WPNName: 
 --- !u!1 &3065382575693921073
@@ -159,8 +159,8 @@ MonoBehaviour:
   cameraShakeIntensity: 0.03
   numebrOfCameraShakes: 15
   WPNShakeInterval: 0.05
-  WPNShakeForce: 0.3
-  rotateSpeed: 20
+  WPNShakeForce: 0.1
+  rotateSpeed: 40
 --- !u!1 &4286027213741493691
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,11 +184,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4286027213741493691}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
   m_LocalPosition: {x: 2.55, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8934567177283254057}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}

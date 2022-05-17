@@ -5,17 +5,18 @@ using UnityEngine;
 public class WPNHammerModel : WeaponModel
 {
     WPNHammerView V;
-
-    protected override void Awake()
+    protected override void Start()
     {
-        base.Awake();
+        base.Start();
         V = GetComponentInChildren<WPNHammerView>();
-        if(V != null)
+        if(V)
             V.HUD.charge = chargeTime;
+        owner = GetComponentInParent<TopDownPlayerModel>();
     }
+
     protected override void StartCharge()
     {
-        if (!IsCharged)
+        if (!IsCharged && canBeUsed)
         {
             currentChargeTime += Time.deltaTime;
             if (currentChargeTime >= chargeTime)
@@ -54,5 +55,17 @@ public class WPNHammerModel : WeaponModel
     {
         IsCharged = false;
         V.charged = IsCharged;
+        currentCD = useCD;
+        V.usable = false;
+    }
+    protected override void StartCoolDown()
+    {
+        base.StartCoolDown();
+        V.usable = false; 
+    }
+    protected override void EndCoolDown()
+    {
+        base.EndCoolDown();
+        V.usable = true;
     }
 }

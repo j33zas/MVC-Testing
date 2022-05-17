@@ -70568,6 +70568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PLAYER MODEL - TopDown
       objectReference: {fileID: 0}
+    - target: {fileID: 2260930873327752261, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
+      propertyPath: cameraShakeIntensity
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2513886734688004560, guid: 8d1263b7462bf3a49ad2daf126a39d7f, type: 3}
       propertyPath: shakeForce
       value: 0.1
