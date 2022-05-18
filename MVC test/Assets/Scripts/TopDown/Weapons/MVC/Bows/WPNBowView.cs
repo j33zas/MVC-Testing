@@ -8,7 +8,7 @@ public class WPNBowView : WeaponView
     Vector3 startPos = Vector3.zero;
     void Awake()
     {
-        currentChargeWPNCanvas = Instantiate(chargeWPNCanvas,transform.parent);
+        currentChargeWPNCanvas = Instantiate(chargeWPNCanvas,transform.parent.parent);
     }
 
     public override void EndChargeView()
@@ -17,7 +17,7 @@ public class WPNBowView : WeaponView
     }
     public override void StartChargeView()
     {
-        if (!charged)
+        if (!charged && usable)
         {
             _AN.SetBool("Charging", true);
             currentChargeWPNCanvas.SetCharge();
@@ -41,7 +41,6 @@ public class WPNBowView : WeaponView
         StopAllCoroutines();
         transform.localPosition = startPos;
         currentChargeWPNCanvas.ResetCharge();
-        Debug.Log("stopped using");
     }
 
 }

@@ -34,10 +34,10 @@ public class HitBox : MonoBehaviour
     }
     protected IHitBoxBehaviour myBehaviour;
     IDMGReceiver hitEntity;
-    Collider2D _Coll;
+    protected Collider2D _Coll;
     virtual protected void Awake()
     {
-        
+        _Coll = GetComponent<Collider2D>();
     }
     virtual protected void Start()
     {
@@ -68,7 +68,5 @@ public class HitBox : MonoBehaviour
                 Debug.Log("damage");
             }
         }
-        //if (coll.gameObject != _O || coll.gameObject.GetType() != GetType())
-            //gameObject.SetActive(false);
     }
 }

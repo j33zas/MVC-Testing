@@ -41,7 +41,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 520, y: 120, z: 0}
+  m_ExitPosition: {x: 520, y: 130, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 5173227586988977685}
 --- !u!1101 &2398238223149936689
@@ -87,7 +87,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b8df09d5c682e3142ba6b937a0fbd34e, type: 2}
+  m_Motion: {fileID: 7400000, guid: aa866ccd3db3e504c9317f4822c3a558, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

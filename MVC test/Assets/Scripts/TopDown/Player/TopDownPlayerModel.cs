@@ -82,7 +82,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
         currentAcceleration = acceleration;
         currentDeAcceleration = deAcceleration;
 
-        currentWeapon = new WPNHammerController(GetComponentInChildren <WPNHammerModel>(), GetComponentInChildren<WPNHammerView>(), this);
+        currentWeapon = new WPNBowController(GetComponentInChildren <WPNBowModel>(), GetComponentInChildren<WPNBowView>(), this);
         cam = Camera.main;
     }
     private void Update()

@@ -49,7 +49,7 @@ MonoBehaviour:
   useCD: 1
   DMG: 8
   projectilePFs:
-  - {fileID: 4567535237557567688, guid: 36c5751c45d1b42448b55bce6a1bbdf8, type: 3}
+  - {fileID: 4567535237557567688, guid: df5dfa8331cba8b4eba1abff163a8885, type: 3}
   projectileSpawns:
   - {fileID: 8021497411032679282}
   chargeTime: 2

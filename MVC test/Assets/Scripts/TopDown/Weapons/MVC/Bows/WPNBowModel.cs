@@ -45,14 +45,24 @@ public class WPNBowModel : WeaponModel
     }
     protected override void StartCharge()
     {
-        if(!IsCharged && canBeUsed)
+        if (!IsCharged && canBeUsed)
         {
             currentChargeTime += Time.deltaTime;
-            if(currentChargeTime >= chargeTime)
+            if (currentChargeTime >= chargeTime)
             {
                 currentChargeTime = chargeTime;
                 onEndCharge();
             }
         }
+    }
+    protected override void StartCoolDown()
+    {
+        base.StartCoolDown();
+        V.usable = false;
+    }
+    protected override void EndCoolDown()
+    {
+        base.EndCoolDown();
+        V.usable = true;
     }
 }
