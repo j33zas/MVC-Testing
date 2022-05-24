@@ -49,13 +49,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EdgeLength: 0.05
+    - _EdgeLength: 0.025
     - _EnableExternalAlpha: 0
     - _NoiseScale: 10
-    - _Step: 0.789
+    - _Step: 1
+    - _Test: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EdgeColor: {r: 3.471698, g: 0.4405466, b: 0.37664655, a: 1}
+    - _EdgeColor: {r: 0.14405055, g: 0.7169812, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
