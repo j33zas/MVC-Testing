@@ -45,8 +45,8 @@ public class WeaponModel : MonoBehaviour
     [SerializeField] protected float chargeTime = 0;
     protected float currentChargeTime;
     protected bool IsCharged;
-    [SerializeField] protected string description;
-    [SerializeField] protected string WPNName;
+    public string description;
+    public string weaponName;
     #endregion
 
     public WeaponModel()

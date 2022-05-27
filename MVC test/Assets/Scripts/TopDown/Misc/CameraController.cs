@@ -51,6 +51,6 @@ public class CameraController : MonoBehaviour
     {
         Vector2 middlePoint = (P - (Vector2)cam.transform.position) / 2 / cameraMaxDistance;
         cam.transform.position = Vector2.Lerp(cam.transform.position, middlePoint + (Vector2)follow.transform.position, Time.deltaTime * cameraLerpSpeed);
-        cam.transform.position += new Vector3(0, 0, -1);
+        cam.transform.position += new Vector3(0, 0, -10);
     }
 }

@@ -40,7 +40,21 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     [SerializeField] float cameraMaxDistance;
     [SerializeField] float cameraLerpSpeed;
     Vector2 mouseOnWorld = Vector2.zero;
-
+    [Header("Pickupable")]
+    bool weaponInRange;
+    public bool canPickUp
+    {
+        //get
+        //{
+        //    return pickUpInRange;
+        //}
+        set
+        {
+            weaponInRange = value;
+        }
+    }
+    public WeaponController currentWeaponControllerInRange;
+    
     #endregion
 
     #region actions
@@ -152,7 +166,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     {
         Vector2 middlePoint = (P - (Vector2)transform.position)/ 2 / cameraMaxDistance;
         cam.transform.position = Vector2.Lerp(cam.transform.position, middlePoint + (Vector2)transform.position, Time.deltaTime * cameraLerpSpeed);
-        cam.transform.position += new Vector3(0, 0, -1);
+        cam.transform.position += new Vector3(0, 0, -10);
     }
     void Roll(Vector2 dir)
     {
@@ -193,7 +207,10 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
 
     void PickUpWeapon()
     {
-
+        if(!weaponInRange)
+        {
+            currentWeapon = currentWeaponControllerInRange;
+        }
     }
 
     void SwitchWeapons()

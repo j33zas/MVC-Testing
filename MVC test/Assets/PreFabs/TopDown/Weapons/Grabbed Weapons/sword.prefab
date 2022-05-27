@@ -100,9 +100,11 @@ MonoBehaviour:
   particles: []
   sounds: []
   chargeWPNCanvas: {fileID: 0}
-  shakeTime: 0.2
-  shakeIntensity: 0.05
-  numebrOfShakes: 5
+  cameraShakeTime: 0
+  cameraShakeIntensity: 0
+  numebrOfCameraShakes: 0
+  WPNShakeInterval: 0
+  WPNShakeForce: 0
 --- !u!1 &7475119451955384692
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,11 +183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useCD: 1
-  DMG: 0
+  DMG: 4
   projectilePFs:
   - {fileID: 3594007850893368201, guid: a47856bf12e73814cbe26ebba4cfb31b, type: 3}
   projectileSpawns:
   - {fileID: 323892206934535466}
   chargeTime: 0
-  description: 
-  WPNName: 
+  description: A sharp metal stick, an absolute classic
+  weaponName: Sword

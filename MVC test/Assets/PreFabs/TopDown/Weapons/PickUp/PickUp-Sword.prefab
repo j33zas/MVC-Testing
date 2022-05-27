@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1731001996517826955}
   - component: {fileID: 7066589989246798321}
+  - component: {fileID: 213520883}
   m_Layer: 0
   m_Name: PickUp-Sword
   m_TagString: Untagged
@@ -49,6 +50,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!114 &213520883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731001996517826954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45782227b060a0541b0ba97fce07eb7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myWPN: {fileID: 5877312526431283595, guid: 02672c8ad965c2a4c9d8086a78d29c59, type: 3}
+  descriptionGUI: {fileID: 6099967720998190736, guid: 11d7486afffd73c40855df38609f6aaa, type: 3}
 --- !u!1 &1731001997098595161
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +74,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1731001997098595162}
   - component: {fileID: 1731001997098595163}
-  - component: {fileID: 7501448210547737026}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -134,18 +148,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7501448210547737026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1731001997098595161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1de0acf40ca45b841854ddfd0d00dd76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: []
-  sounds: []
-  chargeWPNCanvas: {fileID: 0}
