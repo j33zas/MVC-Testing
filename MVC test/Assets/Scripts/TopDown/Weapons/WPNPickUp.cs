@@ -20,8 +20,7 @@ public class WPNPickUp : MonoBehaviour
         {
             currDescriptionGUI.gameObject.SetActive(true);
             P.canPickUp = true;
-            //P.currentWeaponControllerInRange = myWPN;
-            Debug.LogError("Here!");
+            P.currentWeaponControllerInRange = WeaponLibrary.Library.GetControllerFromModel(myWPN);
         }
     }
 

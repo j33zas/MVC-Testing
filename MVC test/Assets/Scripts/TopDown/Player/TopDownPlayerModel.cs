@@ -170,7 +170,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     }
     void Roll(Vector2 dir)
     {
-        if (!canRoll) return;
+        if (!canRoll || isRolling) return;
 
         canRoll = false;
         isRolling = true;

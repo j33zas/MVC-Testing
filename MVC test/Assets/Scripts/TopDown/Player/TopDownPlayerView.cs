@@ -77,8 +77,11 @@ public class TopDownPlayerView : MonoBehaviour
 
     public void RollView(Vector2 dir)
     {
-        _AN.SetTrigger("Roll");
-        GetParticle("Rolling").Play();
+        if(!_AN.GetCurrentAnimatorStateInfo(0).IsName("Roll"))
+        {
+            _AN.SetTrigger("Roll");
+            GetParticle("Rolling").Play();
+        }
     }
 
     public void EndRollView()
