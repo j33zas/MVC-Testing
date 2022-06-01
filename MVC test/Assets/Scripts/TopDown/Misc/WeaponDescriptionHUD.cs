@@ -8,9 +8,10 @@ public class WeaponDescriptionHUD : MonoBehaviour
     public TextMeshProUGUI descriptionTextMesh;
     public TextMeshProUGUI nameTextMesh;
 
-    public void SetNameAndDescription(string name, string description)
+    public WeaponDescriptionHUD SetNameAndDescription(string name, string description)
     {
         descriptionTextMesh.text = description;
         nameTextMesh.text = name;
+        return this;
     }
 }

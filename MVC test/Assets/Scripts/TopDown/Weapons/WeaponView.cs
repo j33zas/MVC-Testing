@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponView : MonoBehaviour
 {
+    public WeaponClass myWPNType;
     protected SpriteRenderer _SR;
     protected Animator _AN;
     protected AudioSource _AU;
@@ -85,6 +86,8 @@ public class WeaponView : MonoBehaviour
     }
     virtual public void LookAtView(Vector3 point, Vector3 positionRef)
     {
+        if (!_SR)
+            _SR = GetComponentInChildren<SpriteRenderer>();
         if (point.y < positionRef.y)
             _SR.sortingLayerName = "AbovePlayer";
         else if (point.y > positionRef.y)

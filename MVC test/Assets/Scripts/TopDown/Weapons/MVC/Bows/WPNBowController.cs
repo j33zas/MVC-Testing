@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WPNBowController : WeaponController
 {
-    public WPNBowController(WeaponModel M, WeaponView V, TopDownPlayerModel P) : base(M, V, P){}
+    public WPNBowController(WeaponModel M, WeaponView V) : base(M, V){}
 
     public override void Listener()
     {

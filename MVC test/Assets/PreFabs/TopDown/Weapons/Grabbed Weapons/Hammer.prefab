@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd33f2d3646eded429283e946e8d1f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myWPNType: 2
   useCD: 1
   DMG: 8
   projectilePFs:
@@ -54,7 +55,7 @@ MonoBehaviour:
   - {fileID: 8021497411032679282}
   chargeTime: 2
   description: 
-  WPNName: 
+  weaponName: 
 --- !u!1 &3065382575693921073
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77dcff16a8429e54c911ee74ac14e237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myWPNType: 0
   particles: []
   sounds: []
   chargeWPNCanvas: {fileID: 5744520088706031486, guid: 328bc80384ca2184895f96861d6b6418, type: 3}

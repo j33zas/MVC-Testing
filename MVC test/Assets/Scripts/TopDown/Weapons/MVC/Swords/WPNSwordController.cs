@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WPNSwordController : WeaponController
 {
-    public WPNSwordController(WeaponModel M, WeaponView V, TopDownPlayerModel P) : base(M, V, P)
+    public WPNSwordController(WeaponModel M, WeaponView V) : base(M, V)
     {
 
     }

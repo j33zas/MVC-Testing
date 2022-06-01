@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class WeaponModel : MonoBehaviour
 {
+    public WeaponClass myWPNType;
+
     #region Actions
     public Action<Vector3, Vector3> OnLook;
     public Action onStartCharge;
@@ -112,7 +114,7 @@ public class WeaponModel : MonoBehaviour
     }
     protected virtual void Use()
     {
-
+        _O.OnUseWeapon();
     }
     protected virtual void EndUse()
     {

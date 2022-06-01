@@ -2,25 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WPNPickUp : MonoBehaviour
+public class WPNPickUp : PickUpable
 {
     [SerializeField] WeaponModel myWPN;
     [SerializeField] WeaponDescriptionHUD descriptionGUI;
     WeaponDescriptionHUD currDescriptionGUI;
-    private void Awake()
+    
+    private void Start()
     {
         currDescriptionGUI = Instantiate(descriptionGUI, transform.position, Quaternion.identity);
-        currDescriptionGUI.SetNameAndDescription(myWPN.weaponName, myWPN.description);
-        currDescriptionGUI.gameObject.SetActive(false);
+        currDescriptionGUI.
+            SetNameAndDescription(myWPN.weaponName, myWPN.description).
+            gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         TopDownPlayerModel P = collision.gameObject.GetComponent<TopDownPlayerModel>();
-        if(P)
+        if (P)
         {
             currDescriptionGUI.gameObject.SetActive(true);
             P.canPickUp = true;
-            P.currentWeaponControllerInRange = WeaponLibrary.Library.GetControllerFromModel(myWPN);
+            P.currentPickUpInRange = this;
         }
     }
 
@@ -31,7 +33,21 @@ public class WPNPickUp : MonoBehaviour
         {
             currDescriptionGUI.gameObject.SetActive(false);
             P.canPickUp = false;
-            P.currentWeaponControllerInRange = null;
+            P.currentPickUpInRange = null;
         }
+    }
+
+    public override void PickMeUp(TopDownPlayerModel P)
+    {
+        base.PickMeUp(P);
+        var WPNInstance = Instantiate(myWPN, P.transform);
+        WPNInstance.transform.position += new Vector3(0, 1.25f, 0);
+        WPNInstance.owner = P;
+        WeaponLibrary.Library.AddController(WPNInstance);
+        var C = WeaponLibrary.Library.GetNewController(myWPN);
+        C.SetOwner(P);
+        P.OnPickupWPN(C);
+        Destroy(gameObject);// cambiar a pool??
+        Destroy(currDescriptionGUI.gameObject);// cambiar a pool??
     }
 }

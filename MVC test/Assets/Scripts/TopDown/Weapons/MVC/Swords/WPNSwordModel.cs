@@ -7,7 +7,6 @@ public class WPNSwordModel : WeaponModel
     protected override void Awake()
     {
         base.Awake();
-        owner = GetComponentInParent<TopDownPlayerModel>();
     }
     protected override void Use()
     {

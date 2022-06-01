@@ -41,19 +41,15 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     [SerializeField] float cameraLerpSpeed;
     Vector2 mouseOnWorld = Vector2.zero;
     [Header("Pickupable")]
-    bool weaponInRange;
+    bool pickupInRange;
     public bool canPickUp
     {
-        //get
-        //{
-        //    return pickUpInRange;
-        //}
         set
         {
-            weaponInRange = value;
+            pickupInRange = value;
         }
     }
-    public WeaponController currentWeaponControllerInRange;
+    public PickUpable currentPickUpInRange;
     
     #endregion
 
@@ -64,7 +60,8 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     public Action OnEndRoll;
     public Action OnUseWeapon;
     public Action OnDodge;
-    public Action OnPickUpWeapon;
+    public Action OnTryPickup;
+    public Action<WeaponController> OnPickupWPN;
     public Action<int,float, Vector2, GameObject> OnGetHit;
     public Action<GameObject> OnDie;
     #endregion
@@ -85,7 +82,8 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
         OnEndRoll += EndRoll;
         OnUseWeapon += UseWeapon;
         OnDodge += DodgeHit;
-        OnPickUpWeapon += PickUpWeapon;
+        OnTryPickup += TryPickUpItem;
+        OnPickupWPN += PickUpWPN;
         OnGetHit += GetHit;
         OnDie += Die;
 
@@ -95,8 +93,6 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
         currentHP = maxHP;
         currentAcceleration = acceleration;
         currentDeAcceleration = deAcceleration;
-
-        currentWeapon = new WPNBowController(GetComponentInChildren <WPNBowModel>(), GetComponentInChildren<WPNBowView>(), this);
         cam = Camera.main;
     }
     private void Update()
@@ -205,12 +201,18 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
 
     }
 
-    void PickUpWeapon()
+    void TryPickUpItem()
     {
-        if(!weaponInRange)
+        if (pickupInRange)
         {
-            currentWeapon = currentWeaponControllerInRange;
+            currentPickUpInRange.PickMeUp(this);
         }
+    }
+
+    void PickUpWPN(WeaponController item)
+    {
+        currentWeapon = item;
+        Debug.LogError("here");
     }
 
     void SwitchWeapons()

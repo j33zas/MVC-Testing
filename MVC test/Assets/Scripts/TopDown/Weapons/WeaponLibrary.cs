@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponLibrary : MonoBehaviour
 {
-    Dictionary<WeaponModel, WeaponController> MtoC;
+    Dictionary<WeaponClass, WeaponController> WPNTypeToController = new Dictionary<WeaponClass, WeaponController>();
     static WeaponLibrary me;
     public static WeaponLibrary Library
     {
@@ -16,19 +16,55 @@ public class WeaponLibrary : MonoBehaviour
     private void Awake()
     {
         me = this;
-        //MtoC.Add(WPNSwordModel A, WPNSwordController)
     }
 
-    public WeaponController GetControllerFromModel(WeaponModel M)
+    public WeaponController GetNewController(WeaponModel M)
     {
-        if (MtoC.ContainsKey(M))
+        if (WPNTypeToController.ContainsKey(M.myWPNType))
         {
-            return MtoC[M];
+            return WPNTypeToController[M.myWPNType];
         }
         else
         {
             Debug.LogError("Model to controller dictionary does not have reference to that object");
-            return null;
+            return default;
         }
     }
+    public void AddController(WeaponModel M)
+    {
+        if (WPNTypeToController.ContainsKey(M.myWPNType))
+            return;
+        WeaponController C;
+        switch (M.myWPNType)
+        {
+            case WeaponClass.Sword:
+                C = new WPNSwordController(M, M.GetComponentInChildren<WeaponView>());
+                WPNTypeToController.Add(M.myWPNType, C);
+                break;
+            case WeaponClass.Hammer:
+                C = new WPNHammerController(M, M.GetComponentInChildren<WeaponView>());
+                WPNTypeToController.Add(M.myWPNType, C);
+                break;
+            case WeaponClass.CrossBow:
+                //C = new WPNCrossbowController(M, M.GetComponentInChildren<WeaponView>(), null);
+                //WPNTypeToController.Add(M.myWPNType, C);
+                break;
+            case WeaponClass.Bow:
+                C = new WPNBowController(M, M.GetComponentInChildren<WeaponView>());
+                WPNTypeToController.Add(M.myWPNType, C);
+                break;
+            default:
+                Debug.Log("Weapon Type is not contemplated in the WaponLibrary or is No Class");
+                break;
+        }
+    }
+}
+
+public enum WeaponClass 
+{
+    NoClass,
+    Sword,
+    Hammer,
+    CrossBow,
+    Bow
 }

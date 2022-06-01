@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f033c48d9dbba49b48c669dd348164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myWPNType: 4
   useCD: 1
   DMG: 3
   projectilePFs:
@@ -153,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62cf95c9ba7105c48b1dd86507180bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myWPNType: 0
   particles: []
   sounds: []
   chargeWPNCanvas: {fileID: 5744520088706031486, guid: 328bc80384ca2184895f96861d6b6418, type: 3}

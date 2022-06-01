@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WPNHammerController : WeaponController
 {
-    public WPNHammerController(WeaponModel M, WeaponView V, TopDownPlayerModel P) : base(M, V, P)
+    public WPNHammerController(WeaponModel M, WeaponView V) : base(M, V)
     {
 
     }
