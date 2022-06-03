@@ -146,6 +146,15 @@ public class WeaponView : MonoBehaviour
     {
 
     }
+
+    public virtual WeaponView EnableView()
+    {
+        return this;
+    }
+    public virtual WeaponView DisableView()
+    {
+        return this;
+    }
     virtual protected IEnumerator ShakeMe(float intensity, float interval, int mult = 1)
     {
         transform.position += new Vector3(0, 1) * mult * intensity;

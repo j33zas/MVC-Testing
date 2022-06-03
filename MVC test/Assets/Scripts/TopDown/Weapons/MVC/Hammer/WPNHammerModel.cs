@@ -8,10 +8,6 @@ public class WPNHammerModel : WeaponModel
     protected override void Start()
     {
         base.Start();
-        V = GetComponentInChildren<WPNHammerView>();
-        if(V)
-            V.HUD.charge = chargeTime;
-        owner = GetComponentInParent<TopDownPlayerModel>();
     }
 
     protected override void StartCharge()
@@ -67,5 +63,14 @@ public class WPNHammerModel : WeaponModel
     {
         base.EndCoolDown();
         V.usable = true;
+    }
+    public override WeaponModel EnableModel()
+    {
+        V = GetComponentInChildren<WPNHammerView>();
+        if (V != null)
+            V.HUD.charge = chargeTime;
+        owner = GetComponentInParent<TopDownPlayerModel>();
+        Debug.LogError("Change");
+        return base.EnableModel();
     }
 }

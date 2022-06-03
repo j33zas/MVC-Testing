@@ -146,3 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45782227b060a0541b0ba97fce07eb7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myWPN: {fileID: 3017963572125116433, guid: 972625bdc8f2c364f9b2ca3d9c26a640, type: 3}
+  descriptionGUI: {fileID: 6099967720998190736, guid: 11d7486afffd73c40855df38609f6aaa, type: 3}

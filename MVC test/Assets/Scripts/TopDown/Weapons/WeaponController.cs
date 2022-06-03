@@ -38,4 +38,16 @@ public class WeaponController : IWeaponController
         _P = P;
         return this;
     }
+    public virtual WeaponController DisableWeapon()
+    {
+        _M.DisableModel();
+        _V.DisableView();
+        return this;
+    }
+    public virtual WeaponController EnableWeapon()
+    {
+        _M.EnableModel();
+        _V.EnableView();
+        return this;
+    }
 }

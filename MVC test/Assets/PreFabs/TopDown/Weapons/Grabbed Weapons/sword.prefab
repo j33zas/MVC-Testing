@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1534606958, guid: 2394fd42bc8ff0c4ca60cdcb55aec010, type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -101,9 +101,9 @@ MonoBehaviour:
   particles: []
   sounds: []
   chargeWPNCanvas: {fileID: 0}
-  cameraShakeTime: 0
-  cameraShakeIntensity: 0
-  numebrOfCameraShakes: 0
+  cameraShakeTime: 0.05
+  cameraShakeIntensity: 0.3
+  numebrOfCameraShakes: 10
   WPNShakeInterval: 0
   WPNShakeForce: 0
 --- !u!1 &7475119451955384692
@@ -161,7 +161,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9190706074549373537}
-  m_LocalRotation: {x: 0, y: 0, z: -0.044127088, w: 0.99902594}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

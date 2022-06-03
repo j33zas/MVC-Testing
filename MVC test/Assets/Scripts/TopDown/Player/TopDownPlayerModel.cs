@@ -40,7 +40,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     [SerializeField] float cameraMaxDistance;
     [SerializeField] float cameraLerpSpeed;
     Vector2 mouseOnWorld = Vector2.zero;
-    [Header("Pickupable")]
+    [Header("Inventory")]
     bool pickupInRange;
     public bool canPickUp
     {
@@ -50,6 +50,9 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
         }
     }
     public PickUpable currentPickUpInRange;
+    [SerializeField] int inventorySize;
+    int currentInventoyrySize;
+    int currentWeaponIdex;
     
     #endregion
 
@@ -94,6 +97,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
         currentAcceleration = acceleration;
         currentDeAcceleration = deAcceleration;
         cam = Camera.main;
+        currentWeaponIdex = 0;
     }
     private void Update()
     {
@@ -158,12 +162,14 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
                 transform.localScale = new Vector3(1, 1, 1);
         }
     }
+
     void CameraPositioning(Vector2 P)
     {
         Vector2 middlePoint = (P - (Vector2)transform.position)/ 2 / cameraMaxDistance;
         cam.transform.position = Vector2.Lerp(cam.transform.position, middlePoint + (Vector2)transform.position, Time.deltaTime * cameraLerpSpeed);
         cam.transform.position += new Vector3(0, 0, -10);
     }
+
     void Roll(Vector2 dir)
     {
         if (!canRoll || isRolling) return;
@@ -203,7 +209,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
 
     void TryPickUpItem()
     {
-        if (pickupInRange)
+        if (pickupInRange && weaponInventory.Count >= currentInventoyrySize)
         {
             currentPickUpInRange.PickMeUp(this);
         }
@@ -211,8 +217,14 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
 
     void PickUpWPN(WeaponController item)
     {
-        currentWeapon = item;
-        Debug.LogError("here");
+        if(weaponInventory.Count >= currentInventoyrySize)
+        {
+            if(currentWeapon != null)
+                currentWeapon.DisableWeapon();
+            currentWeapon = item;
+            currentWeapon.EnableWeapon();
+            currentWeaponIdex++;
+        }
     }
 
     void SwitchWeapons()

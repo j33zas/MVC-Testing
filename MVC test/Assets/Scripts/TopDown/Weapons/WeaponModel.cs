@@ -68,7 +68,14 @@ public class WeaponModel : MonoBehaviour
         onDrop += Drop;
         onEquip += Equip;
     }
-
+    public virtual WeaponModel EnableModel()
+    {
+        return this;
+    }
+    public virtual WeaponModel DisableModel()
+    {
+        return this;
+    }
     #region Functions
     protected virtual void Awake()
     {
