@@ -221,6 +221,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
         {
             if(currentWeapon != null)
                 currentWeapon.DisableWeapon();
+            weaponInventory.Add(item);
             currentWeapon = item;
             currentWeapon.EnableWeapon();
             currentWeaponIdex++;
@@ -229,7 +230,13 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
 
     void SwitchWeapons()
     {
-            
+        currentWeapon.DisableWeapon();
+        currentWeaponIdex++;
+        if(currentWeaponIdex == weaponInventory.Count-1)
+        {
+            currentWeaponIdex = 0;
+        }
+        currentWeapon.EnableWeapon();
     }
 
     void Die(GameObject killer)
