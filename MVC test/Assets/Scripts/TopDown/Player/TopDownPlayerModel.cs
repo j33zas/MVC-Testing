@@ -9,9 +9,11 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     #region Components
     TopDownPlayerView view;
     TopDownPlayerController controller;
+    bool listeningToController = true;
     Rigidbody2D _RB2D;
     GameObject hands;
-    WeaponController currentWeapon;
+    WeaponController currentWeaponController;
+    bool listeningToWeapon = true;
     List<WeaponController> weaponInventory = new List<WeaponController>();
     #endregion
 
@@ -64,6 +66,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     public Action OnUseWeapon;
     public Action OnDodge;
     public Action OnTryPickup;
+    public Action OnSwitchWeapons;
     public Action<WeaponController> OnPickupWPN;
     public Action<int,float, Vector2, GameObject> OnGetHit;
     public Action<GameObject> OnDie;
@@ -87,6 +90,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
         OnDodge += DodgeHit;
         OnTryPickup += TryPickUpItem;
         OnPickupWPN += PickUpWPN;
+        OnSwitchWeapons += SwitchWeapons;
         OnGetHit += GetHit;
         OnDie += Die;
 
@@ -101,14 +105,14 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     }
     private void Update()
     {
-        if (controller != null)
+        if (controller != null && listeningToController)
         {
             controller.Listener();
         }
 
-        if (currentWeapon != default)
+        if (currentWeaponController != default && listeningToWeapon)
         {
-            currentWeapon.Listener();
+            currentWeaponController.Listener();
         }
 
         if (!canRoll)
@@ -219,24 +223,28 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     {
         if(weaponInventory.Count >= currentInventoyrySize)
         {
-            if(currentWeapon != null)
-                currentWeapon.DisableWeapon();
+            if(currentWeaponController != null)
+                currentWeaponController.OnDisableWeapon();
             weaponInventory.Add(item);
-            currentWeapon = item;
-            currentWeapon.EnableWeapon();
+            currentWeaponController = item;
+            currentWeaponController.OnEnableWeapon();
             currentWeaponIdex++;
         }
     }
 
     void SwitchWeapons()
     {
-        currentWeapon.DisableWeapon();
+        if (currentWeaponController == null)
+            return;
+
+        currentWeaponController.OnDisableWeapon();
         currentWeaponIdex++;
         if(currentWeaponIdex == weaponInventory.Count-1)
         {
             currentWeaponIdex = 0;
         }
-        currentWeapon.EnableWeapon();
+
+        currentWeaponController.OnEnableWeapon();
     }
 
     void Die(GameObject killer)

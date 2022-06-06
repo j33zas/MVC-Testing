@@ -14,6 +14,7 @@ public class WeaponController : IWeaponController
         _V = V;
         myWPNType = _M.myWPNType;
         _V.myWPNType = _M.myWPNType;
+
         _M.OnLook += _V.LookAtView;
         _M.onDrop += _V.DropView;
         _M.onEndCharge += _V.EndChargeView;
@@ -38,13 +39,13 @@ public class WeaponController : IWeaponController
         _P = P;
         return this;
     }
-    public virtual WeaponController DisableWeapon()
+    public virtual WeaponController OnDisableWeapon()
     {
         _M.DisableModel();
         _V.DisableView();
         return this;
     }
-    public virtual WeaponController EnableWeapon()
+    public virtual WeaponController OnEnableWeapon()
     {
         _M.EnableModel();
         _V.EnableView();

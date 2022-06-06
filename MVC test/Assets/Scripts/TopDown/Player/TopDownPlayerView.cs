@@ -102,6 +102,11 @@ public class TopDownPlayerView : MonoBehaviour
 
     }
 
+    public void SwitchWeaponView()
+    {
+
+    }
+
     public void DodgeView()
     {
         

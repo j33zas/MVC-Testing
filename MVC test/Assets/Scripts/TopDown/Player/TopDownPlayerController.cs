@@ -21,6 +21,7 @@ public class TopDownPlayerController : ITopDownController
         _M.OnDodge += _V.DodgeView;
         _M.OnTryPickup += _V.TryPickUpView;
         _M.OnPickupWPN += _V.PickUpView;
+        _M.OnSwitchWeapons += _V.SwitchWeaponView;
         _M.OnGetHit += _V.GetHitView;
         _M.OnDie += _V.DieView;
         lastdir = Vector2.zero;
@@ -43,5 +44,7 @@ public class TopDownPlayerController : ITopDownController
             _M.OnRoll(lastdir);
         if (Input.GetKeyDown(KeyCode.E))
             _M.OnTryPickup();
+        if (Input.GetKeyDown(KeyCode.Q))
+            _M.OnSwitchWeapons();
     }
 }
