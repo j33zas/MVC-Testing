@@ -108,9 +108,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 228
-        width: 24
-        height: 28
+        y: 227
+        width: 14
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: Weapons Edges_1
       rect:
         serializedVersion: 2
-        x: 23
-        y: 221
-        width: 98
-        height: 35
+        x: 15
+        y: 227
+        width: 12
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: Weapons Edges_2
       rect:
         serializedVersion: 2
-        x: 120
-        y: 202
-        width: 127
-        height: 54
+        x: 27
+        y: 222
+        width: 21
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: Weapons Edges_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 151
-        width: 38
-        height: 49
+        x: 53
+        y: 246
+        width: 70
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: Weapons Edges_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 199
-        width: 119
-        height: 23
+        x: 127
+        y: 240
+        width: 28
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +212,10 @@ TextureImporter:
       name: Weapons Edges_5
       rect:
         serializedVersion: 2
-        x: 118
-        y: 197
-        width: 28
-        height: 16
+        x: 160
+        y: 238
+        width: 60
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,6 +225,195 @@ TextureImporter:
       bones: []
       spriteID: 9912ef78333397f4a9613e78ef380022
       internalID: -429631510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Edges_6
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 201
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5304ad5817d426c48a050eb8f27fc40d
+      internalID: 1787585255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Edges_7
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 212
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04458e7929660cc4c87885cad0708e49
+      internalID: -1846096669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Edges_8
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 218
+        width: 46
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc70b5e200b5d04a981ee5beedc281b
+      internalID: 2128764516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Edges_9
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 219
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163368d3fde3e314b87edd5dec2932d6
+      internalID: 872961731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Edges_10
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 209
+        width: 74
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69476fe06a2a5141a13a078d3f95487
+      internalID: -124505106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Edges_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 191
+        width: 120
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439e33a4b19a8e64881b859310755127
+      internalID: 1128842750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Edges_12
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 158
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f06e739c716afa43bef779f455fb017
+      internalID: 1639777164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Edges_13
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 165
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18d009535fa9a849be4f63d5f2943c2
+      internalID: 2082714743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Edges_14
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 188
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf888a96b17365d4b89fdc13ddf2d48b
+      internalID: 340143246
       vertices: []
       indices: 
       edges: []
@@ -242,8 +431,17 @@ TextureImporter:
     nameFileIdTable:
       Weapons Edges_2: -600284779
       Weapons Edges_4: -1654944004
+      Weapons Edges_7: -1846096669
+      Weapons Edges_9: 872961731
       Weapons Edges_0: 391432002
+      Weapons Edges_14: 340143246
+      Weapons Edges_12: 1639777164
+      Weapons Edges_11: 1128842750
       Weapons Edges_5: -429631510
+      Weapons Edges_8: 2128764516
+      Weapons Edges_13: 2082714743
+      Weapons Edges_6: 1787585255
+      Weapons Edges_10: -124505106
       Weapons Edges_1: 240410692
       Weapons Edges_3: -1944629572
   spritePackingTag: 

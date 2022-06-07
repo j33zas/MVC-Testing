@@ -102,7 +102,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Weapons Mask_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 227
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b109daa6de557414587f630017bfb801
+      internalID: -1997830606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 227
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7ef15062d97504dad5fd1ed46b98a9
+      internalID: 1286444068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 222
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42199502715fc404d94ddf16054f64fb
+      internalID: -1260555550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_3
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 246
+        width: 70
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf20af7d7fb39040a583076167305b7
+      internalID: 661171493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_4
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 240
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0bbcdbced1daf489f595bc1eadba7f
+      internalID: -778110405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 238
+        width: 60
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf27844faf54774896a22c4a514275c
+      internalID: -1568259108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_6
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 201
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4235f67073c8cb348908ce07368f9b9b
+      internalID: 288026864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_7
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 213
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96c3240282c44646a25ceaaf867f4c0
+      internalID: -992094564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_8
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 218
+        width: 46
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729a68fd7a7207349a4b2f5810a0d241
+      internalID: -1990196416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_9
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 219
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bab3b6db4f591c47b9caef4f67effe6
+      internalID: -1278475833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_10
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 209
+        width: 74
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26125f867438ebe4ab7918b85c218f93
+      internalID: 1693873410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 191
+        width: 120
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a53b0dfd9cccff4693c0bbeeaac76e3
+      internalID: -364982374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_12
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 158
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514fabd786b1b1e47bf69f0c0d671a45
+      internalID: -858692934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_13
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 165
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0fadabd12b4b04ca69be111d94baf3
+      internalID: 319331904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Mask_14
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 188
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177c8e02ca9e9b54382e39a06d4d9075
+      internalID: -1259583984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -113,7 +428,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Weapons Mask_11: -364982374
+      Weapons Mask_9: -1278475833
+      Weapons Mask_6: 288026864
+      Weapons Mask_1: 1286444068
+      Weapons Mask_10: 1693873410
+      Weapons Mask_0: -1997830606
+      Weapons Mask_4: -778110405
+      Weapons Mask_14: -1259583984
+      Weapons Mask_8: -1990196416
+      Weapons Mask_12: -858692934
+      Weapons Mask_13: 319331904
+      Weapons Mask_3: 661171493
+      Weapons Mask_5: -1568259108
+      Weapons Mask_2: -1260555550
+      Weapons Mask_7: -992094564
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
