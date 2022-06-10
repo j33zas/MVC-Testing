@@ -1,0 +1,291 @@
+Using pre-set license
+Built from '2021.2/staging' branch; Version is '2021.2.17f1 (efb8f635e7b1) revision 15710454'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.17134) 64bit Professional' Language: 'es' Physical Memory: 8089 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.2.17f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/matias.levy/Documents/GitHub/MVC-Testing/MVC test
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50298
+Successfully changed project path to: C:/Users/matias.levy/Documents/GitHub/MVC-Testing/MVC test
+C:/Users/matias.levy/Documents/GitHub/MVC-Testing/MVC test
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 189.32 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.2.17f1 (efb8f635e7b1)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.17f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/matias.levy/Documents/GitHub/MVC-Testing/MVC test/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 520 (ID=0x1916)
+    Vendor:   Intel
+    VRAM:     4044 MB
+    Driver:   27.20.100.8681
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.17f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.17f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56588
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006170 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 184.97 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.037 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1038ms)
+		BeginReloadAssembly (113ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (759ms)
+			LoadAssemblies (110ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (160ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (476ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (185ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (202ms)
+				ProcessInitializeOnLoadMethodAttributes (77ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.012719 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\matias.levy\Documents\GitHub\MVC-Testing\MVC test\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\matias.levy\Documents\GitHub\MVC-Testing\MVC test\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 188.47 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.869 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2871ms)
+		BeginReloadAssembly (186ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (2501ms)
+			LoadAssemblies (152ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (434ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (101ms)
+			SetupLoadedEditorAssemblies (1750ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (189ms)
+				BeforeProcessingInitializeOnLoad (213ms)
+				ProcessInitializeOnLoadAttributes (1174ms)
+				ProcessInitializeOnLoadMethodAttributes (155ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 1.14 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5440 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 39 unused Assets / (0.7 MB). Loaded Objects now: 5901.
+Memory consumption went from 217.0 MB to 216.3 MB.
+Total: 5.900810 ms (FindLiveObjects: 0.544001 ms CreateObjectMapping: 0.513708 ms MarkObjects: 4.426674 ms  DeleteObjects: 0.414721 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 4889.818416 seconds.
+  path: Assets/Art/UI/CHageWheel.png
+  artifactKey: Guid(f8d5ee105a96f664692a334ecde86568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/UI/CHageWheel.png using Guid(f8d5ee105a96f664692a334ecde86568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ceccb6f1695c9da7a8b43b6ea3c963d') in 0.183749 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/PreFabs/TopDown/PLAYER MODEL - TopDown.prefab
+  artifactKey: Guid(8d1263b7462bf3a49ad2daf126a39d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PreFabs/TopDown/PLAYER MODEL - TopDown.prefab using Guid(8d1263b7462bf3a49ad2daf126a39d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d01f4a038d3a657330f2f15e0322f86') in 0.361287 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Art/UI/VCR_OSD_MONO_1.001 SDF.asset
+  artifactKey: Guid(caed16bb7a1abbb49bfa00cc51f78c33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/UI/VCR_OSD_MONO_1.001 SDF.asset using Guid(caed16bb7a1abbb49bfa00cc51f78c33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abd083d37b082cf17efcd7ab3fa78dd2') in 0.096239 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Art/UI/HUD bars.png
+  artifactKey: Guid(e57bff9f0ec9158419b6b81acb24c0dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/UI/HUD bars.png using Guid(e57bff9f0ec9158419b6b81acb24c0dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af6ffe878a1a4249d21ae6822a137172') in 0.065630 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Art/UI/VCR_OSD_MONO_1.001.ttf
+  artifactKey: Guid(b2885dfcabc486e4291e5bb18fc60af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/UI/VCR_OSD_MONO_1.001.ttf using Guid(b2885dfcabc486e4291e5bb18fc60af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7613ee68559a2cd20e353cd8e83e9749') in 0.062911 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.326913 seconds.
+  path: Assets/Art/Weapons/Weapons Dropped Atlas.png
+  artifactKey: Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Dropped Atlas.png using Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34ddf6d6bf0d34cdd34fe77b5337819c') in 0.117622 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Art/Weapons/Weapons Edges.png
+  artifactKey: Guid(fba6188b6a5032b429c55bdee2ba6e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Edges.png using Guid(fba6188b6a5032b429c55bdee2ba6e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17eb194a9fd475cfa097ee9cf0269c08') in 0.067165 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Art/Weapons/Weapons Mask.png
+  artifactKey: Guid(ff0deafe02f0b3a47a6a9370eaf68717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Mask.png using Guid(ff0deafe02f0b3a47a6a9370eaf68717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '469da599828af249a7efbd097125798d') in 0.025522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2721.414261 seconds.
+  path: Assets/Art/Weapons/Weapons Mask.png
+  artifactKey: Guid(ff0deafe02f0b3a47a6a9370eaf68717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Mask.png using Guid(ff0deafe02f0b3a47a6a9370eaf68717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6abf94d201d381328fd2eb7d4f30934d') in 0.050203 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Art/Weapons/Weapons Dropped Atlas.png
+  artifactKey: Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Dropped Atlas.png using Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f583ef9738e8b522749f2c6b64ce748') in 0.117498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.384864 seconds.
+  path: Assets/Art/Weapons/Weapons Mask.png
+  artifactKey: Guid(ff0deafe02f0b3a47a6a9370eaf68717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Mask.png using Guid(ff0deafe02f0b3a47a6a9370eaf68717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbae896767995af1c19a091f1e5c2407') in 0.115266 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Art/Weapons/Weapons Dropped Atlas.png
+  artifactKey: Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Dropped Atlas.png using Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdaf725f6954a4ee10db65cf21b7cb21') in 0.109945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 60.501669 seconds.
+  path: Assets/Art/Weapons/Weapons Dropped Atlas.png
+  artifactKey: Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Dropped Atlas.png using Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6e7f40ddee4b80763adc50b28c8468d') in 0.118332 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Art/Weapons/Weapons Edges.png
+  artifactKey: Guid(fba6188b6a5032b429c55bdee2ba6e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Edges.png using Guid(fba6188b6a5032b429c55bdee2ba6e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '400f389f0d4d38fa17847dbcc34a752e') in 0.057233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.513224 seconds.
+  path: Assets/Art/Weapons/Weapons Mask.png
+  artifactKey: Guid(ff0deafe02f0b3a47a6a9370eaf68717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Mask.png using Guid(ff0deafe02f0b3a47a6a9370eaf68717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2cb6fd6c2000e01e14572eb6e947650') in 0.110423 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Art/Weapons/Weapons Dropped Atlas.png
+  artifactKey: Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Dropped Atlas.png using Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dbd23b8fde296e71e805ae79f7fcd9e') in 0.151837 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.394680 seconds.
+  path: Assets/Art/Weapons/Weapons Edges.png
+  artifactKey: Guid(fba6188b6a5032b429c55bdee2ba6e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Edges.png using Guid(fba6188b6a5032b429c55bdee2ba6e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9be973369885b651b49734a1128ff8c0') in 0.107593 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Art/Weapons/Weapons Dropped Atlas.png
+  artifactKey: Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Dropped Atlas.png using Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eab4ab4177784e20a32b78503cfc5fd3') in 0.113490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 350.504966 seconds.
+  path: Assets/Art/Weapons/Weapons Edges.png
+  artifactKey: Guid(fba6188b6a5032b429c55bdee2ba6e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Edges.png using Guid(fba6188b6a5032b429c55bdee2ba6e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '420ca64b85759508ce44ba9a3ad5780c') in 0.121884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000114 seconds.
+  path: Assets/Art/Weapons/Weapons Dropped Atlas.png
+  artifactKey: Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Dropped Atlas.png using Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdd4e171039991b3b25c3b700ecd8623') in 0.117034 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.547791 seconds.
+  path: Assets/Art/Weapons/Weapons Edges.png
+  artifactKey: Guid(fba6188b6a5032b429c55bdee2ba6e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Edges.png using Guid(fba6188b6a5032b429c55bdee2ba6e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2629bdb21ace4be4c5f108a7069ad4a') in 0.111201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Art/Weapons/Weapons Dropped Atlas.png
+  artifactKey: Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Weapons/Weapons Dropped Atlas.png using Guid(6f3cf9b4f0909fd4e9109c8c040a223d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7789928504bad2ecc3e22d5af7fbfee') in 0.118401 seconds 
