@@ -53,7 +53,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
     }
     public PickUpable currentPickUpInRange;
     [SerializeField] int inventorySize;
-    int currentInventoyrySize;
+    int currentInventorySize;
     int currentWeaponIdex;
     
     #endregion
@@ -213,7 +213,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
 
     void TryPickUpItem()
     {
-        if (pickupInRange && weaponInventory.Count >= currentInventoyrySize)
+        if (pickupInRange && weaponInventory.Count >= currentInventorySize)
         {
             currentPickUpInRange.PickMeUp(this);
         }
@@ -221,7 +221,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
 
     void PickUpWPN(WeaponController item)
     {
-        if(weaponInventory.Count >= currentInventoyrySize)
+        if(weaponInventory.Count >= currentInventorySize)
         {
             if(currentWeaponController != null)
                 currentWeaponController.OnDisableWeapon();
@@ -234,7 +234,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
 
     void SwitchWeapons()
     {
-        if (currentWeaponController == null)
+        if (currentWeaponController == null || currentInventorySize < 2)
             return;
 
         currentWeaponController.OnDisableWeapon();
@@ -243,7 +243,6 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
         {
             currentWeaponIdex = 0;
         }
-
         currentWeaponController.OnEnableWeapon();
     }
 

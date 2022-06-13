@@ -4920,6 +4920,7 @@ MonoBehaviour:
   - {fileID: 2024641680855768809}
   - {fileID: 2024641681395191998}
   sounds: []
+  PLHUD: {fileID: 3823850350472059633, guid: 2508a6d569aa45f4d98ac0cefec502d5, type: 3}
   cameraMaxDistance: 2
   cameraLerpSpeed: 10
 --- !u!212 &2024641679938493898
@@ -5054,6 +5055,7 @@ MonoBehaviour:
   cameraMaxDistance: 3
   cameraLerpSpeed: 5
   currentPickUpInRange: {fileID: 0}
+  inventorySize: 0
 --- !u!50 &2024641680344573581
 Rigidbody2D:
   serializedVersion: 4
@@ -24551,37 +24553,19 @@ TrailRenderer:
         time: 0
         value: 1
         inSlope: 0
-        outSlope: -0.99999994
-        tangentMode: 69
+        outSlope: -0.024649099
+        tangentMode: 1
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.4
-        value: 0.6
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.8
-        value: 0.2
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+        outWeight: 0.3380783
       - serializedVersion: 3
         time: 1
         value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
+        inSlope: -2.251603
+        outSlope: 0
+        tangentMode: 1
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.092526674
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2

@@ -47,8 +47,8 @@ public class WeaponController : IWeaponController
     }
     public virtual WeaponController OnEnableWeapon()
     {
-        _M.EnableModel();
         _V.EnableView();
+        _M.EnableModel();
         return this;
     }
 }

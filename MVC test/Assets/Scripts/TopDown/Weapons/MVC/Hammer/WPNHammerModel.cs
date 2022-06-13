@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WPNHammerModel : WeaponModel
 {
-    WPNHammerView V;
     protected override void Start()
     {
         base.Start();
@@ -66,11 +65,13 @@ public class WPNHammerModel : WeaponModel
     }
     public override WeaponModel EnableModel()
     {
-        V = GetComponentInChildren<WPNHammerView>();
-        if (V != null)
+        if(!owner)
+            owner = GetComponentInParent<TopDownPlayerModel>();
+        if(!V)
+        {
+            V = GetComponentInChildren<WPNHammerView>();
             V.HUD.charge = chargeTime;
-        owner = GetComponentInParent<TopDownPlayerModel>();
-        Debug.LogError("Change");
+        }
         return base.EnableModel();
     }
 }

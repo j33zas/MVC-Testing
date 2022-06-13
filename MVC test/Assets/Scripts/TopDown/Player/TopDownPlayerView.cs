@@ -12,7 +12,8 @@ public class TopDownPlayerView : MonoBehaviour
     protected Dictionary<string, ParticleSystem> _partDictionary;
     [SerializeField] AudioClip[] sounds;
     protected Dictionary<string, AudioClip> _soundDictionary;
-
+    [SerializeField] PlayerHUD PLHUD;
+    PlayerHUD currPLHUD;
     [Header("camera")]
     [SerializeField] float cameraMaxDistance;
     [SerializeField] float cameraLerpSpeed;
@@ -23,6 +24,7 @@ public class TopDownPlayerView : MonoBehaviour
         _AN = GetComponent<Animator>();
         _TR = GetComponentInChildren<TrailRenderer>();
         _TR.gameObject.SetActive(false);
+        currPLHUD = Instantiate(PLHUD);
         foreach (var S in sounds)
             AddSound(S);
         foreach (var P in particles)

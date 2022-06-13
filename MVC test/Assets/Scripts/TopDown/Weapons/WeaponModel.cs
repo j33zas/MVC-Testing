@@ -37,6 +37,7 @@ public class WeaponModel : MonoBehaviour
             _O = value;
         }
     }
+    protected WeaponView V;
     [SerializeField] protected float useCD;
     protected float currentCD;
     protected bool canBeUsed;
@@ -99,6 +100,7 @@ public class WeaponModel : MonoBehaviour
             currentCD = 0;
             onEndCoolDown();
         }
+        V.usable = canBeUsed;
     }
     protected virtual void LookAt(Vector3 point, Vector3 position)
     {

@@ -30,6 +30,29 @@ public class WeaponLibrary : MonoBehaviour
             return default;
         }
     }
+    public WPNPickUp GetNewPickUp(WeaponController WC)
+    {
+        WPNPickUp temp = new WPNPickUp();
+        Debug.LogError("solve here");
+        switch (WC.myWPNType)
+        {
+            case WeaponClass.Sword:
+                break;
+            case WeaponClass.Hammer:
+
+                break;
+            case WeaponClass.CrossBow:
+
+                break;
+            case WeaponClass.Bow:
+
+                break;
+            default:
+                Debug.Log("Weapon Type is not contemplated in the WaponLibrary or is No Class");
+                break;
+        }
+        return temp;
+    }
     public void AddController(WeaponModel M)
     {
         if (WPNTypeToController.ContainsKey(M.myWPNType))

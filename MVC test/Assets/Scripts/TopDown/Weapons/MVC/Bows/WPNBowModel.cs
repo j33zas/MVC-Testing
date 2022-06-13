@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class WPNBowModel : WeaponModel
 {
-    WPNBowView V;
     public WPNBowModel ():base()
     {    }
     protected override void Start()
     {
         base.Start();
-        V = GetComponentInChildren<WPNBowView>();
-        if(V)
-            V.HUD.charge = chargeTime;
         owner = GetComponentInParent<TopDownPlayerModel>();//altamente mal, hacer en pickup del player
     }
 
@@ -64,5 +60,18 @@ public class WPNBowModel : WeaponModel
     {
         base.EndCoolDown();
         V.usable = true;
+    }
+    public override WeaponModel EnableModel()
+    {
+        if (!V)
+        {
+            V = GetComponentInChildren<WPNBowView>();
+            V.HUD.charge = chargeTime;
+        }
+        return base.EnableModel();
+    }
+    public override WeaponModel DisableModel()
+    {
+        return base.DisableModel();
     }
 }

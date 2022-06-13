@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -1534606958, guid: 2394fd42bc8ff0c4ca60cdcb55aec010, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 8, y: 8}
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myWPNType: 1
-  useCD: 1
+  useCD: 0.25
   DMG: 4
   projectilePFs:
   - {fileID: 3594007850893368201, guid: a47856bf12e73814cbe26ebba4cfb31b, type: 3}

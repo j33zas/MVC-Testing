@@ -21,6 +21,6 @@ public class HitBoxBehaiviour : IHitBoxBehaviour
     {
         _myHitBox = H;
         GameObject.Destroy(_myHitBox.gameObject, _myHitBox.lifetime);// cambiar a Pool
-        Debug.LogError("Hitboxes are using Destroy instead of returning to the Object Pool");
+        //Debug.LogError("Hitboxes are using Destroy instead of returning to the Object Pool");
     }
 }

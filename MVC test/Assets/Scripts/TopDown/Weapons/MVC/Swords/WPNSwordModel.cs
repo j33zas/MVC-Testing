@@ -23,4 +23,15 @@ public class WPNSwordModel : WeaponModel
     {
         currentCD = useCD;
     }
+    public override WeaponModel EnableModel()
+    {
+        if (!V)
+            V = GetComponentInChildren<WeaponView>();
+        return base.EnableModel();
+    }
+    public override WeaponModel DisableModel()
+    {
+        //gameObject.SetActive(false);
+        return base.DisableModel();
+    }
 }
