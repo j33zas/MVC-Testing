@@ -24,7 +24,7 @@ public class TopDownPlayerView : MonoBehaviour
         _AN = GetComponent<Animator>();
         _TR = GetComponentInChildren<TrailRenderer>();
         _TR.gameObject.SetActive(false);
-        currPLHUD = Instantiate(PLHUD);
+        currPLHUD = Instantiate(PLHUD).SetHPBar().SetHPTXT(100);
         foreach (var S in sounds)
             AddSound(S);
         foreach (var P in particles)
