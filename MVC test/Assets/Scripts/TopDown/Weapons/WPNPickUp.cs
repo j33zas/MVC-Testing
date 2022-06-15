@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WPNPickUp : PickUpable
 {
-    [SerializeField] WeaponModel myWPN;
+    public WeaponModel myWPN;
     [SerializeField] WeaponDescriptionHUD descriptionGUI;
     WeaponDescriptionHUD currDescriptionGUI;
     

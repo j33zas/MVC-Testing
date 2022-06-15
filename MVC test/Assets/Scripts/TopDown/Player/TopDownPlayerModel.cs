@@ -221,29 +221,48 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
 
     void PickUpWPN(WeaponController item)
     {
-        if(weaponInventory.Count >= currentInventorySize)
+        if(currentWeaponController == null)
         {
-            if(currentWeaponController != null)
-                currentWeaponController.OnDisableWeapon();
-            weaponInventory.Add(item);
+            currentWeaponController = item;
+            item.OnEnableWeapon();
+        }
+        else
+        {
+            Instantiate(WeaponLibrary.Library.GetNewPickUp(currentWeaponController));
+            currentWeaponController.OnDisableWeapon();
             currentWeaponController = item;
             currentWeaponController.OnEnableWeapon();
-            currentWeaponIdex++;
         }
+        //if(weaponInventory.Count >= currentInventorySize)
+        //{
+        //    if(currentWeaponController != null)
+        //        currentWeaponController.OnDisableWeapon();
+        //    //weaponInventory.Add(item);
+        //    currentWeaponController = item;
+        //    currentWeaponController.OnEnableWeapon();
+        //    currentWeaponIdex++;
+        //}
+        //else
+        //{
+        //    weaponInventory.Remove(currentWeaponController);
+        //    weaponInventory.Add(item);
+        //    Instantiate(WeaponLibrary.Library.GetNewPickUp(currentWeaponController));
+        //    currentWeaponController = item;
+        //}
     }
 
     void SwitchWeapons()
     {
-        if (currentWeaponController == null || currentInventorySize < 2)
-            return;
+        //if (currentWeaponController == null || currentInventorySize < 2)
+        //    return;
 
-        currentWeaponController.OnDisableWeapon();
-        currentWeaponIdex++;
-        if(currentWeaponIdex == weaponInventory.Count-1)
-        {
-            currentWeaponIdex = 0;
-        }
-        currentWeaponController.OnEnableWeapon();
+        //currentWeaponController.OnDisableWeapon();
+        //currentWeaponIdex++;
+        //if(currentWeaponIdex == weaponInventory.Count-1)
+        //{
+        //    currentWeaponIdex = 0;
+        //}
+        //currentWeaponController.OnEnableWeapon();
     }
 
     void Die(GameObject killer)

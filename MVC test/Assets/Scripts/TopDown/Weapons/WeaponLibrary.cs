@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponLibrary : MonoBehaviour
 {
+    static string PickUpPath = "/PreFabs/TopDown/Weapons/PickUp/PickUp";
     Dictionary<WeaponClass, WeaponController> WPNTypeToController = new Dictionary<WeaponClass, WeaponController>();
     static WeaponLibrary me;
     public static WeaponLibrary Library
@@ -32,26 +33,17 @@ public class WeaponLibrary : MonoBehaviour
     }
     public WPNPickUp GetNewPickUp(WeaponController WC)
     {
-        WPNPickUp temp = new WPNPickUp();
-        Debug.LogError("solve here");
-        switch (WC.myWPNType)
+        Debug.Log(PickUpPath + WC.myWPNType + ".prefab");
+        WPNPickUp temp = (WPNPickUp)Resources.Load(PickUpPath + WC.myWPNType + ".prefab", typeof(WPNPickUp));
+        if (temp)
         {
-            case WeaponClass.Sword:
-                break;
-            case WeaponClass.Hammer:
-
-                break;
-            case WeaponClass.CrossBow:
-
-                break;
-            case WeaponClass.Bow:
-
-                break;
-            default:
-                Debug.Log("Weapon Type is not contemplated in the WaponLibrary or is No Class");
-                break;
+            return temp;
         }
-        return temp;
+        else
+        {
+            Debug.Log("Weapon is not present in resource folder or in the WPNType Enum");
+            return null;
+        }
     }
     public void AddController(WeaponModel M)
     {
