@@ -100,7 +100,8 @@ public class WeaponModel : MonoBehaviour
             currentCD = 0;
             onEndCoolDown();
         }
-        V.usable = canBeUsed;
+        if(V)
+            V.usable = canBeUsed;
     }
     protected virtual void LookAt(Vector3 point, Vector3 position)
     {

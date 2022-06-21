@@ -25,29 +25,29 @@ public class PlayerHUD : MonoBehaviour
     #region setters
     public PlayerHUD SetHPTXT(int max)
     {
-        if (!HPText.enabled)
-            HPText.enabled = true;
+        if (!HPText.gameObject.activeInHierarchy)
+            HPText.gameObject.SetActive(true);
         HPText.text = max + "/" + max;
         return this;
     }
     public PlayerHUD SetMPTXT(int max)
     {
-        if (!MPText.enabled)
-            MPText.enabled = true;
+        if (!MPText.gameObject.activeInHierarchy)
+            MPText.gameObject.SetActive(true);
         MPText.text = max + "/" + max;
         return this;
     }
     public PlayerHUD SetHPBar()
     {
-        if (!HPFill.enabled)
-            HPFill.enabled = true;
+        if (!HPFill.gameObject.activeInHierarchy)
+            HPFill.gameObject.SetActive(true);
         HPFill.fillAmount = 1;
         return this;
     }
     public PlayerHUD SetMPBar()
     {
-        if (!MPFill.enabled)
-            MPFill.enabled = true;
+        if (!MPFill.gameObject.activeInHierarchy)
+            MPFill.gameObject.SetActive(true);
         MPFill.fillAmount = 1;
         return this;
     }
@@ -56,8 +56,9 @@ public class PlayerHUD : MonoBehaviour
         return this;
     }
     #endregion
+
     public void SetBarValue(float max, float curr, string barType)
     {
-        Debug.LogError("jeir");
+        
     }
 }
