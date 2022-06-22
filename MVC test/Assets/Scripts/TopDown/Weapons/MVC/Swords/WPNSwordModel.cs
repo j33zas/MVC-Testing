@@ -31,7 +31,7 @@ public class WPNSwordModel : WeaponModel
     }
     public override WeaponModel DisableModel()
     {
-        //gameObject.SetActive(false);
+        Destroy(gameObject);
         return base.DisableModel();
     }
 }

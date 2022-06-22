@@ -33,8 +33,8 @@ public class WeaponLibrary : MonoBehaviour
     }
     public WPNPickUp GetNewPickUp(WeaponController WC)
     {
-        Debug.Log(PickUpPath + WC.myWPNType + ".prefab");
-        WPNPickUp temp = (WPNPickUp)Resources.Load(PickUpPath + WC.myWPNType + ".prefab", typeof(WPNPickUp));
+        var temp = Resources.Load("PreFabs/PickUp" + WC.myWPNType, typeof(WPNPickUp)) as WPNPickUp;
+        Debug.Log(temp);
         if (temp)
         {
             return temp;

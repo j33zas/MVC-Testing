@@ -72,6 +72,7 @@ public class WPNBowModel : WeaponModel
     }
     public override WeaponModel DisableModel()
     {
+        Destroy(gameObject);
         return base.DisableModel();
     }
 }

@@ -8,19 +8,15 @@ public class WPNPickUp : PickUpable
     [SerializeField] WeaponDescriptionHUD descriptionGUI;
     WeaponDescriptionHUD currDescriptionGUI;
     
-    private void Start()
-    {
-        currDescriptionGUI = Instantiate(descriptionGUI, transform.position, Quaternion.identity);
-        currDescriptionGUI.
-            SetNameAndDescription(myWPN.weaponName, myWPN.description).
-            gameObject.SetActive(false);
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         TopDownPlayerModel P = collision.gameObject.GetComponent<TopDownPlayerModel>();
         if (P)
         {
-            currDescriptionGUI.gameObject.SetActive(true);
+            if (currDescriptionGUI == null)
+                currDescriptionGUI = Instantiate(descriptionGUI, transform.position, Quaternion.identity);
+            currDescriptionGUI.
+            SetNameAndDescription(myWPN.weaponName, myWPN.description).gameObject.SetActive(true);
             P.canPickUp = true;
             P.currentPickUpInRange = this;
         }
@@ -31,7 +27,8 @@ public class WPNPickUp : PickUpable
         TopDownPlayerModel P = collision.gameObject.GetComponent<TopDownPlayerModel>();
         if (P)
         {
-            currDescriptionGUI.gameObject.SetActive(false);
+            currDescriptionGUI.SetNameAndDescription("","").
+            gameObject.SetActive(false);
             P.canPickUp = false;
             P.currentPickUpInRange = null;
         }
@@ -47,7 +44,7 @@ public class WPNPickUp : PickUpable
         var C = WeaponLibrary.Library.GetNewController(myWPN);
         C.SetOwner(P);
         P.OnPickupWPN(C);
-        Destroy(gameObject);// cambiar a pool??
-        Destroy(currDescriptionGUI.gameObject);// cambiar a pool??
+        Destroy(gameObject);
+        Destroy(currDescriptionGUI.gameObject);
     }
 }

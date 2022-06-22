@@ -228,7 +228,7 @@ public class TopDownPlayerModel : MonoBehaviour,IDMGReceiver
         }
         else
         {
-            Instantiate(WeaponLibrary.Library.GetNewPickUp(currentWeaponController));
+            Instantiate(WeaponLibrary.Library.GetNewPickUp(currentWeaponController), transform.position, Quaternion.identity);
             currentWeaponController.OnDisableWeapon();
             currentWeaponController = item;
             currentWeaponController.OnEnableWeapon();

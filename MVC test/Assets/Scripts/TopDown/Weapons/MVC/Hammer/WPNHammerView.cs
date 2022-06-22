@@ -45,7 +45,7 @@ public class WPNHammerView : WeaponView
     }
     public override WeaponView EnableView()
     {
-        if(!currentChargeWPNCanvas)
+        if (!currentChargeWPNCanvas)
             currentChargeWPNCanvas = Instantiate(chargeWPNCanvas, transform.parent.parent);
         startPos = Vector3.zero;
         return base.EnableView();
@@ -53,7 +53,7 @@ public class WPNHammerView : WeaponView
     public override WeaponView DisableView()
     {
         _SR.enabled = false;
-        currentChargeWPNCanvas.gameObject.SetActive(false);
+        Destroy(currentChargeWPNCanvas.gameObject);
         return base.DisableView();
     }
 }

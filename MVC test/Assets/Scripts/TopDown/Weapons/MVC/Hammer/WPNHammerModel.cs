@@ -74,4 +74,9 @@ public class WPNHammerModel : WeaponModel
         }
         return base.EnableModel();
     }
+    public override WeaponModel DisableModel()
+    {
+        Destroy(gameObject);
+        return base.DisableModel();
+    }
 }

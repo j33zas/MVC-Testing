@@ -42,5 +42,18 @@ public class WPNBowView : WeaponView
         transform.localPosition = startPos;
         currentChargeWPNCanvas.ResetCharge();
     }
-
+    public override WeaponView EnableView()
+    {
+        Debug.Log(currentChargeWPNCanvas);
+        if (!currentChargeWPNCanvas)
+            currentChargeWPNCanvas = Instantiate(chargeWPNCanvas, transform.parent.parent);
+        startPos = Vector3.zero;
+        return base.EnableView();
+    }
+    public override WeaponView DisableView()
+    {
+        _SR.enabled = false;
+        Destroy(currentChargeWPNCanvas.gameObject);
+        return base.DisableView();
+    }
 }
