@@ -28,8 +28,8 @@ public class WPNBowModel : WeaponModel
     protected override void Use()
     {
         var B = Instantiate(projectilePFs[0], projectileSpawns[0].transform.position, projectileSpawns[0].transform.rotation);
-        B.dmg = currentDMG;
-        B.owner = owner.gameObject;
+        B.Dmg = currentDMG;
+        B.Owner = owner.gameObject;
         currentChargeTime = 0;
         onEndUse();
     }

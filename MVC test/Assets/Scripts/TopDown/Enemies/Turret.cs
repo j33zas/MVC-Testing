@@ -32,6 +32,6 @@ public class Turret : MonoBehaviour
     void Shoot()
     {
         var B = Instantiate(projectile, shootPosition.position, shootDirection.rotation);
-        B.owner = gameObject;
+        B.Owner = gameObject;
     }
 }

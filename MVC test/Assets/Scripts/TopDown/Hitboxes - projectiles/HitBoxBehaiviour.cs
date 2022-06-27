@@ -5,7 +5,7 @@ using UnityEngine;
 public class HitBoxBehaiviour : IHitBoxBehaviour
 {
     protected HitBox _myHitBox;
-    protected bool canBehave = true;
+    public bool canBehave = true;
     public virtual void Behave()
     {
         if (_myHitBox == null && canBehave)
@@ -20,7 +20,7 @@ public class HitBoxBehaiviour : IHitBoxBehaviour
     public virtual void SpawnIn(HitBox H)
     {
         _myHitBox = H;
-        GameObject.Destroy(_myHitBox.gameObject, _myHitBox.lifetime);// cambiar a Pool
+        canBehave = true;
         //Debug.LogError("Hitboxes are using Destroy instead of returning to the Object Pool");
     }
 }

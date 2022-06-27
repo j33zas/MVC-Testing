@@ -14,12 +14,15 @@ public class WPNBowView : WeaponView
     public override void EndChargeView()
     {
         StartCoroutine(ShakeMe(WPNShakeForce,WPNShakeInterval));
+        StopParticle("Charge");
+        PlayParticle("Charged");
     }
     public override void StartChargeView()
     {
         if (!charged && usable)
         {
             _AN.SetBool("Charging", true);
+            PlayParticle("Charge");
             currentChargeWPNCanvas.SetCharge();
         }
     }
@@ -28,6 +31,7 @@ public class WPNBowView : WeaponView
         charged = false;
         _AN.SetTrigger("StoppedCharge");
         _AN.SetBool("Charging", false);
+        StopParticle("Charge");
         currentChargeWPNCanvas.ResetCharge();
     }
     public override void UseView()

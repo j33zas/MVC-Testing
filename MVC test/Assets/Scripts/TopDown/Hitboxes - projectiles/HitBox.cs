@@ -5,8 +5,10 @@ using UnityEngine;
 public class HitBox : MonoBehaviour
 {
     public float lifetime;
+    [HideInInspector]public float currLifetime;
+    public bool canBehave = true;
     int _myDMG;
-    public int dmg
+    public int Dmg
     {
         get
         {
@@ -21,7 +23,7 @@ public class HitBox : MonoBehaviour
     public float knockBack;
     public Vector2 knockBackDirection;
     GameObject _O;
-    public GameObject owner
+    public GameObject Owner
     {
         get
         {
@@ -33,11 +35,12 @@ public class HitBox : MonoBehaviour
         }
     }
     protected IHitBoxBehaviour myBehaviour;
-    IDMGReceiver hitEntity;
+    IDMGReceiver HitEntity;
     protected Collider2D _Coll;
     virtual protected void Awake()
     {
         _Coll = GetComponent<Collider2D>();
+        currLifetime = lifetime;
     }
     virtual protected void Start()
     {
@@ -49,12 +52,20 @@ public class HitBox : MonoBehaviour
 
     virtual protected void Update()
     {
-        if(myBehaviour != null)
-            myBehaviour.Behave();
+        if (myBehaviour != null)
+        {
+            if (canBehave)
+                myBehaviour.Behave();
+        }
     }
     virtual protected void OnDisable()
     {
         if(myBehaviour != null)
+            myBehaviour.DieOff();
+    }
+    virtual protected void OnDestroy()
+    {
+        if (myBehaviour != null)
             myBehaviour.DieOff();
     }
     virtual protected void OnTriggerEnter2D(Collider2D coll)
@@ -64,7 +75,7 @@ public class HitBox : MonoBehaviour
             var dmgreceiver = coll.gameObject.GetComponent<IDMGReceiver>();
             if(dmgreceiver != null)
             {
-                dmgreceiver.GetHit(dmg, knockBack, knockBackDirection, _O);
+                dmgreceiver.GetHit(Dmg, knockBack, knockBackDirection, _O);
                 Debug.Log("damage");
             }
         }

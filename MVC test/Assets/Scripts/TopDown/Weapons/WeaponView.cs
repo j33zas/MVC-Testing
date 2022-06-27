@@ -68,7 +68,20 @@ public class WeaponView : MonoBehaviour
     {
         _partDictionary[name].Play();
     }
-
+    protected void StopParticle(string name)
+    {
+        _partDictionary[name].Stop();
+    }
+    protected ParticleSystem GetParticle(string name)
+    {
+        if (_partDictionary.ContainsKey(name))
+            return _partDictionary[name];
+        else
+        {
+            Debug.Log("Particle not found");
+            return null;
+        }
+    }
     protected WeaponView AddParticle(ParticleSystem P)
     {
         if (_partDictionary == null)
