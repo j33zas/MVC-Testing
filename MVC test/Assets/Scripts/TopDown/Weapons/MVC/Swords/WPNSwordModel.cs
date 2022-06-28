@@ -16,6 +16,7 @@ public class WPNSwordModel : WeaponModel
             s.transform.up = projectileSpawns[0].transform.up;
             s.Owner = owner.gameObject;
             s.Dmg = currentDMG;
+            s.knockBack = currentKnockBack;
             onEndUse();
         }
     }

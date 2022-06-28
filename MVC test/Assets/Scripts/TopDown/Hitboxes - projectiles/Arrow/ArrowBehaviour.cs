@@ -21,6 +21,7 @@ public class ArrowBehaviour : HitBoxBehaiviour
     public override void DieOff()
     {
         base.DieOff();
+        canBehave = false;
         _myHitBox.speed = 0;
         MonoBehaviour.Destroy(_myHitBox.GetComponent<HitBox>());
         MonoBehaviour.Destroy(_myHitBox.GetComponent<Rigidbody2D>());

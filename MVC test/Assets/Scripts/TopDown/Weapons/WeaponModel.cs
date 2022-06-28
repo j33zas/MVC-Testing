@@ -43,6 +43,8 @@ public class WeaponModel : MonoBehaviour
     protected bool canBeUsed;
     [SerializeField] protected int DMG;
     protected int currentDMG;
+    [SerializeField] protected float knockBack;
+    protected float currentKnockBack;
     [SerializeField] protected HitBox[] projectilePFs;
     [SerializeField] protected Transform[] projectileSpawns;
     [SerializeField] protected float chargeTime = 0;
@@ -82,6 +84,8 @@ public class WeaponModel : MonoBehaviour
     {
         currentCD = 0;
         canBeUsed = true;
+        currentKnockBack = knockBack;
+        currentDMG = DMG;
     }
     protected virtual void Start()
     {

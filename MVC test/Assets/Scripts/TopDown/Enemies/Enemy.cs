@@ -2,28 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour,IDMGReceiver
+public class Enemy : MonoBehaviour, IDMGReceiver
 {
     [SerializeField] int maxHP;
     int currHP;
     EnemyBehaviour myBehaviour;
     [SerializeField] bool canBeKncockedBack;
+    [SerializeField] float knockBackResist;
     #region unity stuff
-    Rigidbody2D _RB;
-    SpriteRenderer _SR;
-    Animator _AN;
+    protected Rigidbody2D _RB;
+    protected SpriteRenderer _SR;
+    protected Animator _AN;
     #endregion
-    public void DodgeHit()
+    public virtual void DodgeHit()
     {
         
     }
 
-    public void GetHit(int DMG, float KnockBack, Vector2 direction, GameObject attacker)
+    public virtual void GetHit(int DMG, float KnockBack, Vector2 direction, GameObject attacker)
     {
         currHP -= DMG;
         if (!canBeKncockedBack)
         {
-            _RB.AddForce(direction * KnockBack, ForceMode2D.Impulse);
+            _RB.AddForce((direction * KnockBack) / knockBackResist, ForceMode2D.Impulse);
         }
         if(currHP <= 0)
         {
@@ -31,22 +32,24 @@ public class Enemy : MonoBehaviour,IDMGReceiver
         }
     }
 
-    protected void Die()
+    protected virtual void Die()
     {
 
     }
 
-    protected void Awake()
+    protected virtual void Awake()
     {
-        
+        _AN = GetComponent<Animator>();
+        _SR = GetComponent<SpriteRenderer>();
+        _RB = GetComponent<Rigidbody2D>();
     }
 
-    protected void Start()
+    protected virtual void Start()
     {
         
     }
     
-    protected void Update()
+    protected virtual void Update()
     {
         
     }
