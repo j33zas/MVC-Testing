@@ -18,7 +18,6 @@ public class BasicArrow : HitBox
     {
         if (coll.gameObject != Owner)
         {
-            Debug.Log("colisione con " + coll.gameObject.name + " y mi dueño es " + Owner);
             _Coll.enabled = false;
             myBehaviour.DieOff();
         }

@@ -30,6 +30,7 @@ public class WPNBowModel : WeaponModel
         var B = Instantiate(projectilePFs[0], projectileSpawns[0].transform.position, projectileSpawns[0].transform.rotation);
         B.Dmg = currentDMG;
         B.Owner = owner.gameObject;
+        B.knockBack = currentKnockBack;
         currentChargeTime = 0;
         onEndUse();
     }

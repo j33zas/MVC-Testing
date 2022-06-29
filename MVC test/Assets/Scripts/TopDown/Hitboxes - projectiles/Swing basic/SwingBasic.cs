@@ -14,6 +14,7 @@ public class SwingBasic : HitBox
     protected override void OnTriggerEnter2D(Collider2D coll)
     {
         base.OnTriggerEnter2D(coll);
-        Destroy(gameObject);
+        if(coll.gameObject != Owner || coll.GetComponent<HitBox>() == null)
+            Destroy(gameObject);
     }
 }

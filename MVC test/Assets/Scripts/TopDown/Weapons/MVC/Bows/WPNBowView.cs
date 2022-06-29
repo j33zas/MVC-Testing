@@ -22,7 +22,8 @@ public class WPNBowView : WeaponView
         if (!charged && usable)
         {
             _AN.SetBool("Charging", true);
-            PlayParticle("Charge");
+            if(!GetParticle("Charge").isPlaying)
+                PlayParticle("Charge");
             currentChargeWPNCanvas.SetCharge();
         }
     }

@@ -69,16 +69,15 @@ public class HitBox : MonoBehaviour
     }
     virtual protected void OnTriggerEnter2D(Collider2D coll)
     {
-        Debug.Log(_O + "/" + coll.gameObject);
-        if(coll.gameObject != _O || coll.GetType() != GetType())
+        if (coll.gameObject == _O || coll.GetComponent<HitBox>() != null)
+            return;
+        var dmgreceiver = coll.gameObject.GetComponent<IDMGReceiver>();
+        if(dmgreceiver != null)
         {
-            var dmgreceiver = coll.gameObject.GetComponent<IDMGReceiver>();
-            if(dmgreceiver != null)
-            {
-                Vector2 knockBackDirection = coll.gameObject.transform.position - transform.position;
-                dmgreceiver.GetHit(Dmg, knockBack, knockBackDirection, _O);
-                Debug.Log("damage");
-            }
+            Vector2 knockBackDirection = coll.gameObject.transform.position - transform.position;
+            dmgreceiver.GetHit(Dmg, knockBack, knockBackDirection, _O);
+            Destroy(this);
+            Debug.Log("damage");
         }
     }
 }

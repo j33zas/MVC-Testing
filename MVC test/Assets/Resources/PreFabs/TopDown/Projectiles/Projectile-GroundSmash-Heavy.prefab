@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5450743064481289467}
   - component: {fileID: 8990710169433270242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 533731247410451457}
   - component: {fileID: 1537599418422072897}
   - component: {fileID: 4567535237557567688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Projectile-GroundSmash-Heavy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,9 +179,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 0.5
+  currLifetime: 0
+  canBehave: 1
   speed: 0
   knockBack: 3
-  knockBackDirection: {x: 0, y: 0}
 --- !u!1 &5415672622256337692
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2462714183490536144}
   - component: {fileID: 8307078850612632597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}

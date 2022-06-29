@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1731001996517826955}
   - component: {fileID: 7066589989246798321}
   - component: {fileID: 213520883}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PickUpSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1731001997098595162}
   - component: {fileID: 1731001997098595163}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

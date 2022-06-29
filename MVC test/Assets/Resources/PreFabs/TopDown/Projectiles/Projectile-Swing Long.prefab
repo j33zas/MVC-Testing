@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4834011195183193711}
   - component: {fileID: 6230939684806146617}
   - component: {fileID: 3594007850893368201}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Projectile-Swing Long
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,9 +73,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 0.3
+  currLifetime: 0
+  canBehave: 1
   speed: 1
   knockBack: 0
-  knockBackDirection: {x: 0, y: 0}
 --- !u!1 &2310622565999582258
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7605069673758798352}
   - component: {fileID: 801027509039449755}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
