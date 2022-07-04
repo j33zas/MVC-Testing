@@ -8,6 +8,7 @@ public class Dummy : Enemy
     {
         base.GetHit(DMG, KnockBack, direction, attacker);
         _AN.Play("Hurt");
+        TimeController.controller.HitStop(.1f);
         //TimeManager.HitStop();
     }
 }
