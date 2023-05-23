@@ -29,7 +29,7 @@ public class TimeController : MonoBehaviour
     IEnumerator HitStopCoroutine(float time)
     {
         Time.timeScale = 0;
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSecondsRealtime (time);
         Time.timeScale = 1;
     }
 }
