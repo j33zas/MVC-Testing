@@ -3,7 +3,7 @@ guid: 6f3cf9b4f0909fd4e9109c8c040a223d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -104,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Weapons Atlas_0
+      name: Weapons Dropped Atlas_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,308 +113,1085 @@ TextureImporter:
         width: 12
         height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86fe8ce3e1aff47429ee5111209d90e0
-      internalID: -2096012194
+      spriteID: b6b2d2792df56dd41a00b13bb5497fe8
+      internalID: 1853279107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_1
+      name: Weapons Dropped Atlas_1
       rect:
         serializedVersion: 2
         x: 13
         y: 229
         width: 10
-        height: 27
+        height: 26
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e71a631e452221438ea83a9fead465c
-      internalID: 1161707910
+      spriteID: 496f3b4c10f180044b849e44d0f2087d
+      internalID: -1900573956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_2
+      name: Weapons Dropped Atlas_2
       rect:
         serializedVersion: 2
         x: 24
-        y: 243
-        width: 7
-        height: 13
+        y: 227
+        width: 9
+        height: 29
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d43322c185067848bff3d7586697e35
-      internalID: -890832889
+      spriteID: d40fa5ef5d4b8a04ea4e5a58fd1cacd6
+      internalID: 1185569637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_3
+      name: Weapons Dropped Atlas_3
       rect:
         serializedVersion: 2
-        x: 32
+        x: 35
+        y: 221
+        width: 10
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4ae352cdcfb294fb0693565c59cb92
+      internalID: 694011417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 46
         y: 224
         width: 19
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20ada1a27a45ee944a851dce1ae56f16
-      internalID: -1972332104
+      spriteID: a97d6f3253453d048bffa15d146b8460
+      internalID: -1536111258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_4
+      name: Weapons Dropped Atlas_5
       rect:
         serializedVersion: 2
-        x: 52
-        y: 248
-        width: 68
-        height: 8
+        x: 66
+        y: 224
+        width: 19
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bf51501024bee24593b474673775453
-      internalID: -1510742133
+      spriteID: 129dbad42557af447ac6f25c368c9bb0
+      internalID: 1535248167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_5
+      name: Weapons Dropped Atlas_6
       rect:
         serializedVersion: 2
-        x: 121
-        y: 216
+        x: 86
+        y: 198
         width: 16
-        height: 40
+        height: 58
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3466378179f35643a43d7caa5095fc1
-      internalID: -284580248
+      spriteID: c5d464696a2b77e4193b430ea7e46378
+      internalID: -1413502451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_6
+      name: Weapons Dropped Atlas_7
       rect:
         serializedVersion: 2
-        x: 138
-        y: 246
-        width: 16
-        height: 10
+        x: 103
+        y: 197
+        width: 9
+        height: 59
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faf6122e7966f2c43b215ccf3ea51853
-      internalID: 285758344
+      spriteID: f0eb9d7db84022e4c841bc3b796b7b53
+      internalID: 2020210627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_7
+      name: Weapons Dropped Atlas_8
       rect:
         serializedVersion: 2
-        x: 155
-        y: 240
-        width: 58
-        height: 16
+        x: 113
+        y: 212
+        width: 14
+        height: 44
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c0958d5f7711fe459c5bd4612c12213
-      internalID: -1879168596
+      spriteID: 6436a4c5005a64048946cd96640a9806
+      internalID: 852521872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_8
+      name: Weapons Dropped Atlas_9
       rect:
         serializedVersion: 2
-        x: 214
+        x: 128
+        y: 209
+        width: 21
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d1e2bafdf150140ac76d2b706373a3
+      internalID: 1379514836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 150
         y: 203
         width: 32
         height: 53
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 276ca24dcafdc1c4684fe44020ee400b
-      internalID: -1507681910
+      spriteID: 860d6e5d1e5021a4591e5cd92105c8db
+      internalID: -849197678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_9
+      name: Weapons Dropped Atlas_11
       rect:
         serializedVersion: 2
-        x: 52
-        y: 222
-        width: 44
-        height: 25
+        x: 183
+        y: 215
+        width: 8
+        height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ec3c69bebc6c1345b75e3b59f0f01a5
-      internalID: 1472057757
+      spriteID: 6b5925ec723c958459e730f8c160d2ab
+      internalID: 666749452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_10
+      name: Weapons Dropped Atlas_12
       rect:
         serializedVersion: 2
-        x: 97
-        y: 229
-        width: 19
-        height: 18
+        x: 215
+        y: 226
+        width: 12
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76afa15c08fa9e644b701197a15e257e
-      internalID: -704959019
+      spriteID: 37ff86677b8b6ea469ecf6f880c110be
+      internalID: -1501047946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_11
+      name: Weapons Dropped Atlas_13
       rect:
         serializedVersion: 2
-        x: 138
-        y: 213
-        width: 72
-        height: 26
+        x: 220
+        y: 249
+        width: 7
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8201feb7026736488cd3b2b04c6622d
-      internalID: -997985109
+      spriteID: 3ce3f7b77c69b5e44add585b1104682b
+      internalID: -1383116891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_12
+      name: Weapons Dropped Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 220
+        width: 13
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fce500cb9b70245b0cc7e519a3e06f
+      internalID: 239557232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 228
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb46ab36a225684e903778b8d5d184f
+      internalID: 1601146942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_16
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 118
-        height: 21
+        y: 215
+        width: 7
+        height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e41eee831538dd4469be550cef4a07ee
-      internalID: -2108461833
+      spriteID: fd9527604279cde469eec65b48a20604
+      internalID: 692924413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapons Atlas_13
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 198
-        width: 26
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 944ce956545a4424eb6ebf7e937ed525
-      internalID: 1799832463
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapons Atlas_14
+      name: Weapons Dropped Atlas_17
       rect:
         serializedVersion: 2
         x: 0
-        y: 152
+        y: 146
+        width: 8
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bef76dfc1021540a7e59906fcaa797
+      internalID: 1856699436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 162
+        width: 7
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba0c5b849c190940b6ed798724d295c
+      internalID: 403263701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 170
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97079ed78218cb4a9fdcb79bfbdeb92
+      internalID: -1189287935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 167
         width: 37
         height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8073659add526b449b1867ccec0029cd
-      internalID: 2086638502
+      spriteID: 93cd56f86eee2714dac8caf3a9d03b94
+      internalID: -1269264744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 114
+        width: 15
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae062fd75e91dba47835b2a11ab53c9f
+      internalID: -2104515827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 156
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba3064a002013746a5919d1a4ff1133
+      internalID: -562593224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 96
+        width: 9
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda03411586d06540b0c3258d9af6369
+      internalID: 1250057191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 115
+        width: 21
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b36f30c1e8ba484f94de168a2af17ff
+      internalID: 1769554437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 129
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90effcfbe59367449ede60cf25758b1
+      internalID: 267808684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 128
+        width: 13
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51ae61df2402c24d942d5220a5f59b7
+      internalID: -2057641539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 126
+        width: 19
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1176280b9dd1c8a4095ed84d63dc58fa
+      internalID: -1292281374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 117
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4000c1d86ce53c24e9ef2ffbeea3cce1
+      internalID: 107847466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_29
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 118
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489152bbabb51e346888df964e48349f
+      internalID: 91396500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e66e1dac07db6418b8565967876dec
+      internalID: 1770129936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_31
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 77
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4ab4298c72ada42a514896577eff34
+      internalID: -1677775840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_32
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 77
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5111a7313b6a4e040ba3095fafb75617
+      internalID: -1864556680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_33
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 21
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fcf94c61ce5d684c9e67c37cfb96641
+      internalID: 83543188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c410ed69dfb8b428674c4eb3611cba
+      internalID: 365326228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_35
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 58
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fadca86f2d11d4c88d50d03c5442de
+      internalID: 667403696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_36
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 61
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b40014498ae9454e94bfc29a3cf7f62
+      internalID: -304469475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 54
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b780e7ba3533e424b9ba8aa38ddbb7a4
+      internalID: 1242942819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_38
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 26
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c3b067906605148ae85f582acca461
+      internalID: 1150199861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 41
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491ca5a145f0899448a9509b09d2588c
+      internalID: -1953906284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_40
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 40
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36aa9fa600fd7df458c01fe8984ca8f1
+      internalID: 1733290447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_41
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 41
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973b2a715ef1a184e9c31481112b1b2d
+      internalID: -1556333993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_42
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0
+        width: 15
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bca9c869c76ae4f931d30b0f1d416b
+      internalID: -448883251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d8307d87772c04d9efdb4f93d70820
+      internalID: 1611510183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_44
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74a0931ff0a5d34d969554c0067fcc2
+      internalID: 1322443705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_45
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bac3ce52f2f768469dcb419c8d3e5a7
+      internalID: -498304825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_46
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb59bf9cfe46014d8ab221aadbaccf8
+      internalID: 1661838948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_47
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 0
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef3296510968144ea211b597cf35ff3
+      internalID: 1039202079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_48
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 0
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd88cf31cab6f774fa89565f532e7c7a
+      internalID: 914216723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_49
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06424b87a627a4f48b9b12e376aa3932
+      internalID: -2003020011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_50
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8273c73469b2864e904cdbb3286ab40
+      internalID: -1823101822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapons Dropped Atlas_51
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 0
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4e9411ba1b8884abfa0e8a5bf75e17
+      internalID: 589726410
       vertices: []
       indices: 
       edges: []
@@ -433,21 +1211,58 @@ TextureImporter:
     - texture: {fileID: 2800000, guid: ff0deafe02f0b3a47a6a9370eaf68717, type: 3}
       name: _Mask
     nameFileIdTable:
-      Weapons Atlas_8: -1507681910
-      Weapons Atlas_1: 1161707910
-      Weapons Atlas_0: -2096012194
-      Weapons Atlas_9: 1472057757
-      Weapons Atlas_4: -1510742133
-      Weapons Atlas_10: -704959019
-      Weapons Atlas_14: 2086638502
-      Weapons Atlas_7: -1879168596
-      Weapons Atlas_2: -890832889
-      Weapons Atlas_6: 285758344
-      Weapons Atlas_13: 1799832463
-      Weapons Atlas_12: -2108461833
-      Weapons Atlas_5: -284580248
-      Weapons Atlas_3: -1972332104
-      Weapons Atlas_11: -997985109
+      Weapons Dropped Atlas_0: 1853279107
+      Weapons Dropped Atlas_1: -1900573956
+      Weapons Dropped Atlas_10: -849197678
+      Weapons Dropped Atlas_11: 666749452
+      Weapons Dropped Atlas_12: -1501047946
+      Weapons Dropped Atlas_13: -1383116891
+      Weapons Dropped Atlas_14: 239557232
+      Weapons Dropped Atlas_15: 1601146942
+      Weapons Dropped Atlas_16: 692924413
+      Weapons Dropped Atlas_17: 1856699436
+      Weapons Dropped Atlas_18: 403263701
+      Weapons Dropped Atlas_19: -1189287935
+      Weapons Dropped Atlas_2: 1185569637
+      Weapons Dropped Atlas_20: -1269264744
+      Weapons Dropped Atlas_21: -2104515827
+      Weapons Dropped Atlas_22: -562593224
+      Weapons Dropped Atlas_23: 1250057191
+      Weapons Dropped Atlas_24: 1769554437
+      Weapons Dropped Atlas_25: 267808684
+      Weapons Dropped Atlas_26: -2057641539
+      Weapons Dropped Atlas_27: -1292281374
+      Weapons Dropped Atlas_28: 107847466
+      Weapons Dropped Atlas_29: 91396500
+      Weapons Dropped Atlas_3: 694011417
+      Weapons Dropped Atlas_30: 1770129936
+      Weapons Dropped Atlas_31: -1677775840
+      Weapons Dropped Atlas_32: -1864556680
+      Weapons Dropped Atlas_33: 83543188
+      Weapons Dropped Atlas_34: 365326228
+      Weapons Dropped Atlas_35: 667403696
+      Weapons Dropped Atlas_36: -304469475
+      Weapons Dropped Atlas_37: 1242942819
+      Weapons Dropped Atlas_38: 1150199861
+      Weapons Dropped Atlas_39: -1953906284
+      Weapons Dropped Atlas_4: -1536111258
+      Weapons Dropped Atlas_40: 1733290447
+      Weapons Dropped Atlas_41: -1556333993
+      Weapons Dropped Atlas_42: -448883251
+      Weapons Dropped Atlas_43: 1611510183
+      Weapons Dropped Atlas_44: 1322443705
+      Weapons Dropped Atlas_45: -498304825
+      Weapons Dropped Atlas_46: 1661838948
+      Weapons Dropped Atlas_47: 1039202079
+      Weapons Dropped Atlas_48: 914216723
+      Weapons Dropped Atlas_49: -2003020011
+      Weapons Dropped Atlas_5: 1535248167
+      Weapons Dropped Atlas_50: -1823101822
+      Weapons Dropped Atlas_51: 589726410
+      Weapons Dropped Atlas_6: -1413502451
+      Weapons Dropped Atlas_7: 2020210627
+      Weapons Dropped Atlas_8: 852521872
+      Weapons Dropped Atlas_9: 1379514836
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
